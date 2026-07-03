@@ -17,6 +17,25 @@ building any feature** — they are the source of truth for scope and behavior:
 Trace any feature work back to a requirement ID (`FR-*`, `NFR-*`, `TC-*`, `BC-*`).
 If the docs and a request conflict, surface the conflict instead of guessing.
 
+# The OpenSpec flow is mandatory (not optional)
+
+**Never write feature code (`app/`, `lib/`, `src/`) directly.** All feature work
+goes through the OpenSpec loop, in this order:
+
+1. **Spec first.** Author/extend an OpenSpec change under `openspec/changes/<id>/`
+   (`proposal.md` + `specs/<capability>/spec.md` delta citing the FR ids +
+   `tasks.md`). Baseline capability specs (citing every MVP FR) come *before* any
+   capability implementation — that is why `check-traceability.mjs` is global.
+2. **Validate:** `openspec validate <id> --strict` must pass.
+3. **Implement** the tasks, then **sync + archive** the change (delta → baseline).
+4. **Commit per slice** with trailers `Slice: add-<capability>` + `Refs: <FR ids>`.
+
+This is enforced deterministically, not by memory: the `pre-commit` hook runs the
+traceability validator (fails on any uncited MVP FR) and the `commit-msg` hook
+requires a `Slice:` that resolves to a real change. **Never** bypass with
+`--no-verify` — fix the spec/change instead. The full loop is orchestrated by the
+`project-factory` skill / `.project-factory/MASTER-PROMPT.md`.
+
 # Current state
 
 Maintain [`docs/current-state.md`](docs/current-state.md) as a running handoff

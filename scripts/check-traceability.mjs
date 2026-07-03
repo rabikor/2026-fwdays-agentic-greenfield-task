@@ -77,7 +77,11 @@ const requirements = new Map(); // id -> { phase }
 for (const line of (reqText ?? "").split("\n")) {
   const m = line.match(/^\|\s*((?:FR|NFR|TC|BC)-(?:[A-Z0-9]+-)?\d+)\s*\|/);
   if (!m) continue;
-  const phase = /\|\s*Future\s*\|/i.test(line) ? "Future" : "MVP";
+  // Non-MVP scope markers: an explicit `| Future |` cell, or a status cell of
+  // `proposed`/`dropped` (deferred / not accepted for the MVP build). Scoping
+  // these out keeps the gate green-able — a gate that can never pass is a gate
+  // everyone learns to ignore.
+  const phase = /\|\s*(?:Future|proposed|dropped)\s*\|/i.test(line) ? "Future" : "MVP";
   requirements.set(m[1], { phase });
 }
 const mvpFRs = [...requirements.keys()].filter(
