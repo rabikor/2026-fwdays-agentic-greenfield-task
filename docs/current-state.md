@@ -3,6 +3,10 @@
 Running handoff log. Newest entry first. Each entry: ISO 8601 timestamp, what was
 done, files/requirements touched, status, and next steps / open questions.
 
+> Convention defined in [`AGENTS.md`](../AGENTS.md) → "Current state": read this
+> file at the start of every work session and update it at the end. Applies to
+> both AI agents and human contributors.
+
 ---
 
 ## 2026-07-03T00:00:00Z — Split requirements into OpenSpec capabilities
