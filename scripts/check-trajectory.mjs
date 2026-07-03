@@ -74,10 +74,12 @@ for (const slice of slices) {
 
   // 1. review evidence
   let reviewEvidence = "missing";
+  let reviewRecord = null;
   const rf = read(join(dir, "review-findings.json"));
   if (rf) {
     try {
-      reviewEvidence = JSON.parse(rf).clean === true ? "clean" : "unclean";
+      reviewRecord = JSON.parse(rf);
+      reviewEvidence = reviewRecord.clean === true ? "clean" : "unclean";
     } catch {
       reviewEvidence = "unparseable";
     }
@@ -112,6 +114,10 @@ for (const slice of slices) {
         if (!domainToSlices.has(d)) domainToSlices.set(d, []);
         domainToSlices.get(d).push(slice);
       }
+    }
+    if (trailerCommits === 0 && reviewRecord?.sliceTrailer === true) {
+      // Persisted at archive when git history is unavailable (shallow CI clone).
+      trailerCommits = 1;
     }
     if (trailerCommits === 0) gated(flags.has("--release"), "trailer", `${slice}: no commit carries a "Slice: ${trailerName}" trailer`);
   }

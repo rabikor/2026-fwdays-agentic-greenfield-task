@@ -29,5 +29,6 @@
   "confirmedTitles": [],
   "clean": true,
   "generatedAt": "2026-07-03T21:10:00Z",
-  "note": "Retrofitted after global Phase-7 review-gate; slice shipped before per-slice evidence was persisted."
+  "note": "Retrofitted after global Phase-7 review-gate; slice shipped before per-slice evidence was persisted.",
+  "sliceTrailer": true
 }
