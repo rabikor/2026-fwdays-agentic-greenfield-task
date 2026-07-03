@@ -64,6 +64,18 @@ describe("profile store mutations (FR-LIST-01, FR-COMPARE-01)", () => {
     toggleSave(id); // cleanup
   });
 
+  it("assigns unique, monotonic priorities even after remove-then-add", () => {
+    for (const id of Object.keys(getSnapshot().saved)) toggleSave(id); // clear
+    toggleSave("knu-j");
+    toggleSave("kma-f");
+    toggleSave("hnu-p");
+    toggleSave("kma-f"); // remove the middle one
+    toggleSave("lnu-s"); // re-add — must not collide with hnu-p's priority
+    const priorities = Object.values(getSnapshot().saved).map((e) => e.priority);
+    expect(new Set(priorities).size).toBe(priorities.length); // all unique
+    for (const id of Object.keys(getSnapshot().saved)) toggleSave(id); // cleanup
+  });
+
   it("toggleCompare never exceeds three selections", () => {
     for (const id of getSnapshot().compare.slice()) toggleCompare(id); // clear
     for (const id of ["knu-j", "kma-f", "knu-l", "lnu-s", "kpi-cs"]) toggleCompare(id);

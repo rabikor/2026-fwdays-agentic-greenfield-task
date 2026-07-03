@@ -123,7 +123,11 @@ export function toggleSave(id: string): void {
   if (saved[id]) {
     delete saved[id];
   } else {
-    saved[id] = { status: "Збережено", priority: Object.keys(saved).length + 1 };
+    // Max existing priority + 1 (not count + 1) so priorities stay unique and
+    // monotonic even after a remove-then-add — otherwise the new item could
+    // collide with an existing one and the saved-list order would be ambiguous.
+    const maxPriority = Math.max(0, ...Object.values(saved).map((e) => e.priority));
+    saved[id] = { status: "Збережено", priority: maxPriority + 1 };
   }
   commit({ ...current, saved });
 }
