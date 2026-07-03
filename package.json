@@ -6,7 +6,21 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:run": "echo 'no unit tests yet — add Vitest in Phase 4/5' && exit 0",
+    "test:integration": "echo 'no integration tests yet — add in Phase 5' && exit 0",
+    "test:e2e": "echo 'no e2e tests yet — add Playwright in Phase 5' && exit 0",
+    "test:coverage": "echo 'no coverage yet — add with the unit layer' && exit 0",
+    "qa:verify": "node scripts/qa-verify.mjs",
+    "qa:record-demos": "node scripts/record-demos.mjs",
+    "qa:record-proof": "node scripts/record-demos.mjs",
+    "check:trace": "node scripts/check-traceability.mjs",
+    "check:coverage": "node scripts/check-coverage-ratchet.mjs",
+    "check:eval": "node scripts/check-eval-ratchet.mjs",
+    "check:trajectory": "node scripts/check-trajectory.mjs",
+    "check:recordings": "node scripts/check-recordings.mjs",
+    "check:a11y": "node scripts/check-a11y.mjs",
+    "gate:status": "node scripts/gate-status.mjs"
   },
   "dependencies": {
     "next": "16.2.10",

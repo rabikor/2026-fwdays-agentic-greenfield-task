@@ -1,0 +1,348 @@
+{
+  "generatedBy": "scripts/check-traceability.mjs",
+  "requirements": {
+    "FR-INPUT-01": "MVP",
+    "FR-INPUT-02": "MVP",
+    "FR-INPUT-03": "MVP",
+    "FR-FILTER-01": "MVP",
+    "FR-FILTER-02": "MVP",
+    "FR-SCORE-01": "MVP",
+    "FR-SCORE-02": "MVP",
+    "FR-SCORE-03": "MVP",
+    "FR-DETAIL-01": "MVP",
+    "FR-COMPARE-01": "MVP",
+    "FR-LIST-01": "MVP",
+    "FR-LIST-02": "MVP",
+    "FR-LIST-03": "MVP",
+    "FR-STATE-01": "MVP",
+    "FR-UX-01": "MVP",
+    "FR-SEARCH-01": "MVP",
+    "NFR-PERF-01": "MVP",
+    "NFR-RESP-01": "MVP",
+    "NFR-A11Y-01": "MVP",
+    "NFR-PRIV-01": "MVP",
+    "NFR-SYNC-01": "MVP",
+    "TC-PLATFORM-01": "MVP",
+    "TC-STACK-01": "MVP",
+    "TC-STORAGE-01": "MVP",
+    "TC-DATA-01": "MVP",
+    "BC-HONESTY-01": "MVP",
+    "BC-PRIVACY-01": "MVP",
+    "BC-LANG-01": "MVP",
+    "BC-DEADLINE-01": "MVP"
+  },
+  "links": [
+    {
+      "id": "FR-INPUT-01",
+      "specs": [],
+      "planned": null,
+      "tests": [],
+      "recordings": []
+    },
+    {
+      "id": "FR-INPUT-02",
+      "specs": [],
+      "planned": null,
+      "tests": [],
+      "recordings": []
+    },
+    {
+      "id": "FR-INPUT-03",
+      "specs": [],
+      "planned": null,
+      "tests": [],
+      "recordings": []
+    },
+    {
+      "id": "FR-FILTER-01",
+      "specs": [],
+      "planned": null,
+      "tests": [],
+      "recordings": []
+    },
+    {
+      "id": "FR-FILTER-02",
+      "specs": [],
+      "planned": null,
+      "tests": [],
+      "recordings": []
+    },
+    {
+      "id": "FR-SCORE-01",
+      "specs": [],
+      "planned": null,
+      "tests": [],
+      "recordings": []
+    },
+    {
+      "id": "FR-SCORE-02",
+      "specs": [],
+      "planned": null,
+      "tests": [],
+      "recordings": []
+    },
+    {
+      "id": "FR-SCORE-03",
+      "specs": [],
+      "planned": null,
+      "tests": [],
+      "recordings": []
+    },
+    {
+      "id": "FR-DETAIL-01",
+      "specs": [],
+      "planned": null,
+      "tests": [],
+      "recordings": []
+    },
+    {
+      "id": "FR-COMPARE-01",
+      "specs": [],
+      "planned": null,
+      "tests": [],
+      "recordings": []
+    },
+    {
+      "id": "FR-LIST-01",
+      "specs": [],
+      "planned": null,
+      "tests": [],
+      "recordings": []
+    },
+    {
+      "id": "FR-LIST-02",
+      "specs": [],
+      "planned": null,
+      "tests": [],
+      "recordings": []
+    },
+    {
+      "id": "FR-LIST-03",
+      "specs": [],
+      "planned": null,
+      "tests": [],
+      "recordings": []
+    },
+    {
+      "id": "FR-STATE-01",
+      "specs": [],
+      "planned": null,
+      "tests": [],
+      "recordings": []
+    },
+    {
+      "id": "FR-UX-01",
+      "specs": [],
+      "planned": null,
+      "tests": [],
+      "recordings": []
+    },
+    {
+      "id": "FR-SEARCH-01",
+      "specs": [],
+      "planned": null,
+      "tests": [],
+      "recordings": []
+    }
+  ],
+  "failures": [
+    {
+      "check": "spec-mention",
+      "msg": "FR-INPUT-01 is not cited by any spec under openspec/specs/"
+    },
+    {
+      "check": "spec-mention",
+      "msg": "FR-INPUT-02 is not cited by any spec under openspec/specs/"
+    },
+    {
+      "check": "spec-mention",
+      "msg": "FR-INPUT-03 is not cited by any spec under openspec/specs/"
+    },
+    {
+      "check": "spec-mention",
+      "msg": "FR-FILTER-01 is not cited by any spec under openspec/specs/"
+    },
+    {
+      "check": "spec-mention",
+      "msg": "FR-FILTER-02 is not cited by any spec under openspec/specs/"
+    },
+    {
+      "check": "spec-mention",
+      "msg": "FR-SCORE-01 is not cited by any spec under openspec/specs/"
+    },
+    {
+      "check": "spec-mention",
+      "msg": "FR-SCORE-02 is not cited by any spec under openspec/specs/"
+    },
+    {
+      "check": "spec-mention",
+      "msg": "FR-SCORE-03 is not cited by any spec under openspec/specs/"
+    },
+    {
+      "check": "spec-mention",
+      "msg": "FR-DETAIL-01 is not cited by any spec under openspec/specs/"
+    },
+    {
+      "check": "spec-mention",
+      "msg": "FR-COMPARE-01 is not cited by any spec under openspec/specs/"
+    },
+    {
+      "check": "spec-mention",
+      "msg": "FR-LIST-01 is not cited by any spec under openspec/specs/"
+    },
+    {
+      "check": "spec-mention",
+      "msg": "FR-LIST-02 is not cited by any spec under openspec/specs/"
+    },
+    {
+      "check": "spec-mention",
+      "msg": "FR-LIST-03 is not cited by any spec under openspec/specs/"
+    },
+    {
+      "check": "spec-mention",
+      "msg": "FR-STATE-01 is not cited by any spec under openspec/specs/"
+    },
+    {
+      "check": "spec-mention",
+      "msg": "FR-UX-01 is not cited by any spec under openspec/specs/"
+    },
+    {
+      "check": "spec-mention",
+      "msg": "FR-SEARCH-01 is not cited by any spec under openspec/specs/"
+    }
+  ],
+  "warnings": [
+    {
+      "check": "plan-ownership",
+      "msg": "docs/mvp-capability-plan.md not found - ownership check skipped (expected before Phase 3; mandatory at --release)"
+    },
+    {
+      "check": "test-trace",
+      "msg": "FR-INPUT-01 has no test annotated \"@trace FR-INPUT-01\""
+    },
+    {
+      "check": "test-trace",
+      "msg": "FR-INPUT-02 has no test annotated \"@trace FR-INPUT-02\""
+    },
+    {
+      "check": "test-trace",
+      "msg": "FR-INPUT-03 has no test annotated \"@trace FR-INPUT-03\""
+    },
+    {
+      "check": "test-trace",
+      "msg": "FR-FILTER-01 has no test annotated \"@trace FR-FILTER-01\""
+    },
+    {
+      "check": "test-trace",
+      "msg": "FR-FILTER-02 has no test annotated \"@trace FR-FILTER-02\""
+    },
+    {
+      "check": "test-trace",
+      "msg": "FR-SCORE-01 has no test annotated \"@trace FR-SCORE-01\""
+    },
+    {
+      "check": "test-trace",
+      "msg": "FR-SCORE-02 has no test annotated \"@trace FR-SCORE-02\""
+    },
+    {
+      "check": "test-trace",
+      "msg": "FR-SCORE-03 has no test annotated \"@trace FR-SCORE-03\""
+    },
+    {
+      "check": "test-trace",
+      "msg": "FR-DETAIL-01 has no test annotated \"@trace FR-DETAIL-01\""
+    },
+    {
+      "check": "test-trace",
+      "msg": "FR-COMPARE-01 has no test annotated \"@trace FR-COMPARE-01\""
+    },
+    {
+      "check": "test-trace",
+      "msg": "FR-LIST-01 has no test annotated \"@trace FR-LIST-01\""
+    },
+    {
+      "check": "test-trace",
+      "msg": "FR-LIST-02 has no test annotated \"@trace FR-LIST-02\""
+    },
+    {
+      "check": "test-trace",
+      "msg": "FR-LIST-03 has no test annotated \"@trace FR-LIST-03\""
+    },
+    {
+      "check": "test-trace",
+      "msg": "FR-STATE-01 has no test annotated \"@trace FR-STATE-01\""
+    },
+    {
+      "check": "test-trace",
+      "msg": "FR-UX-01 has no test annotated \"@trace FR-UX-01\""
+    },
+    {
+      "check": "test-trace",
+      "msg": "FR-SEARCH-01 has no test annotated \"@trace FR-SEARCH-01\""
+    },
+    {
+      "check": "recording-evidence",
+      "msg": "FR-INPUT-01 is not referenced by any recording manifest under docs/qa/"
+    },
+    {
+      "check": "recording-evidence",
+      "msg": "FR-INPUT-02 is not referenced by any recording manifest under docs/qa/"
+    },
+    {
+      "check": "recording-evidence",
+      "msg": "FR-INPUT-03 is not referenced by any recording manifest under docs/qa/"
+    },
+    {
+      "check": "recording-evidence",
+      "msg": "FR-FILTER-01 is not referenced by any recording manifest under docs/qa/"
+    },
+    {
+      "check": "recording-evidence",
+      "msg": "FR-FILTER-02 is not referenced by any recording manifest under docs/qa/"
+    },
+    {
+      "check": "recording-evidence",
+      "msg": "FR-SCORE-01 is not referenced by any recording manifest under docs/qa/"
+    },
+    {
+      "check": "recording-evidence",
+      "msg": "FR-SCORE-02 is not referenced by any recording manifest under docs/qa/"
+    },
+    {
+      "check": "recording-evidence",
+      "msg": "FR-SCORE-03 is not referenced by any recording manifest under docs/qa/"
+    },
+    {
+      "check": "recording-evidence",
+      "msg": "FR-DETAIL-01 is not referenced by any recording manifest under docs/qa/"
+    },
+    {
+      "check": "recording-evidence",
+      "msg": "FR-COMPARE-01 is not referenced by any recording manifest under docs/qa/"
+    },
+    {
+      "check": "recording-evidence",
+      "msg": "FR-LIST-01 is not referenced by any recording manifest under docs/qa/"
+    },
+    {
+      "check": "recording-evidence",
+      "msg": "FR-LIST-02 is not referenced by any recording manifest under docs/qa/"
+    },
+    {
+      "check": "recording-evidence",
+      "msg": "FR-LIST-03 is not referenced by any recording manifest under docs/qa/"
+    },
+    {
+      "check": "recording-evidence",
+      "msg": "FR-STATE-01 is not referenced by any recording manifest under docs/qa/"
+    },
+    {
+      "check": "recording-evidence",
+      "msg": "FR-UX-01 is not referenced by any recording manifest under docs/qa/"
+    },
+    {
+      "check": "recording-evidence",
+      "msg": "FR-SEARCH-01 is not referenced by any recording manifest under docs/qa/"
+    }
+  ]
+}
