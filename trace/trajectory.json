@@ -32,7 +32,7 @@
     {
       "slice": "2026-07-03-add-program-detail",
       "reviewEvidence": "missing",
-      "trailerCommits": 1,
+      "trailerCommits": 2,
       "libDomains": [],
       "processComplete": false
     },
