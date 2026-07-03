@@ -9,6 +9,37 @@ done, files/requirements touched, status, and next steps / open questions.
 
 ---
 
+## 2026-07-03T00:00:00Z — Implemented `app-shell` capability (Wave 0)
+
+- **Done:** Authored and applied OpenSpec change `add-app-shell` (proposal + spec +
+  design + 26 tasks). Built the responsive Ukrainian Next.js 16 shell every UI slice
+  inherits: `<html lang="uk">`, Ukrainian metadata; **removed Tailwind** (deps,
+  `postcss.config.mjs`, `globals.css` `@import`/`@theme`) per `TC-STACK-01`; vendored
+  the design system into `app/styles/` (`tokens → typography → base → components → shell`,
+  imported in order via `app/globals.css`); loaded Unbounded + Manrope via `next/font`
+  (self-hosted, cyrillic subset) and bound them to `--pk-font-display`/`--pk-font-text`;
+  added `app/lib/format.ts` (`uk-UA` number/percent/date helpers, `54 %`-style percent);
+  built the frame (Header/nav, DeadlineBanner, Disclaimer) with global honesty +
+  deadline surfaces on every route; replaced `app/page.tsx` with a design-system demo.
+- **Verified:** `next build` green (TS clean); served HTML has `lang="uk"`, Ukrainian
+  title, disclaimer, deadline banner, `54 %`; no `fonts.googleapis.com` request (fonts
+  self-hosted as `.woff2`); `--pk-*` tokens + `--font-unbounded` binding present in
+  built CSS; `openspec validate add-app-shell --strict` passes.
+- **Files touched:** `app/layout.tsx`, `app/page.tsx`, `app/globals.css`,
+  `app/styles/{tokens,typography,base,components,shell}.css`, `app/lib/format.ts`,
+  `app/components/{Header,DeadlineBanner,Disclaimer}.tsx`, `package.json`,
+  `postcss.config.mjs` (deleted); `openspec/changes/add-app-shell/*`.
+- **Requirements:** NFR-RESP-01, NFR-A11Y-01, BC-LANG-01, TC-STACK-01, TC-PLATFORM-01,
+  BC-DEADLINE-01 (passive), BC-HONESTY-01 (passive disclaimer).
+- **Status:** done (tasks 26/26). Synced + archived: delta promoted to
+  `openspec/specs/app-shell/spec.md` (baseline, 7 requirements, strict-valid); change
+  moved to `openspec/changes/archive/2026-07-03-add-app-shell/`. No active changes remain.
+- **Next steps:** Proceed to the other Wave 0 capability
+  `program-data`, followed by Wave 1 (`scoring-engine`, `state-persistence`,
+  `score-input`). Deadline banner + disclaimer copy are static placeholders; finalize
+  wording against `docs/PRD.md` when feature content lands. Manual desktop→phone resize
+  was validated via CSS/build only (no headless browser in this session).
+
 ## 2026-07-03T00:00:00Z — Split requirements into OpenSpec capabilities
 
 - **Done:** Decomposed `docs/requirements.md` into 10 MVP capabilities + 3
