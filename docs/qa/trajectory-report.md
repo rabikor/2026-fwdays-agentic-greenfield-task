@@ -5,12 +5,21 @@ archived slice took: review evidence, `Slice:` trailers, and module scope.
 It does NOT verify test-first ordering or test integrity (not derivable from
 one-commit-per-slice history) — those are graded by the trajectory-eval workflow.
 
-Scope: 1 archived slice(s).
-Result: PASS, 2 warning(s)
+Scope: 10 archived slice(s).
+Result: PASS, 20 warning(s)
 
 | Slice | Review evidence | Trailer commits | design+tasks | lib domains touched |
 |---|---|---|---|---|
 | 2026-07-03-add-app-shell | **missing** | **0** | yes | - |
+| 2026-07-03-add-comparison | **missing** | 1 | **no** | - |
+| 2026-07-03-add-filtering | **missing** | 1 | **no** | - |
+| 2026-07-03-add-program-data | **missing** | 1 | **no** | - |
+| 2026-07-03-add-program-detail | **missing** | 1 | **no** | - |
+| 2026-07-03-add-recommendations | **missing** | 1 | **no** | - |
+| 2026-07-03-add-score-input | **missing** | 1 | **no** | - |
+| 2026-07-03-add-scoring-engine | **missing** | 1 | **no** | - |
+| 2026-07-03-add-shortlist | **missing** | 1 | **no** | - |
+| 2026-07-03-add-state-persistence | **missing** | 1 | **no** | - |
 
 ## Cross-slice module overlap
 
@@ -24,3 +33,21 @@ None.
 
 - **review-evidence**: 2026-07-03-add-app-shell: review-findings.json is missing (review must have run clean before archive)
 - **trailer**: 2026-07-03-add-app-shell: no commit carries a "Slice: add-app-shell" trailer
+- **review-evidence**: 2026-07-03-add-comparison: review-findings.json is missing (review must have run clean before archive)
+- **process**: 2026-07-03-add-comparison: archived change is missing design.md and/or tasks.md
+- **review-evidence**: 2026-07-03-add-filtering: review-findings.json is missing (review must have run clean before archive)
+- **process**: 2026-07-03-add-filtering: archived change is missing design.md and/or tasks.md
+- **review-evidence**: 2026-07-03-add-program-data: review-findings.json is missing (review must have run clean before archive)
+- **process**: 2026-07-03-add-program-data: archived change is missing design.md and/or tasks.md
+- **review-evidence**: 2026-07-03-add-program-detail: review-findings.json is missing (review must have run clean before archive)
+- **process**: 2026-07-03-add-program-detail: archived change is missing design.md and/or tasks.md
+- **review-evidence**: 2026-07-03-add-recommendations: review-findings.json is missing (review must have run clean before archive)
+- **process**: 2026-07-03-add-recommendations: archived change is missing design.md and/or tasks.md
+- **review-evidence**: 2026-07-03-add-score-input: review-findings.json is missing (review must have run clean before archive)
+- **process**: 2026-07-03-add-score-input: archived change is missing design.md and/or tasks.md
+- **review-evidence**: 2026-07-03-add-scoring-engine: review-findings.json is missing (review must have run clean before archive)
+- **process**: 2026-07-03-add-scoring-engine: archived change is missing design.md and/or tasks.md
+- **review-evidence**: 2026-07-03-add-shortlist: review-findings.json is missing (review must have run clean before archive)
+- **process**: 2026-07-03-add-shortlist: archived change is missing design.md and/or tasks.md
+- **review-evidence**: 2026-07-03-add-state-persistence: review-findings.json is missing (review must have run clean before archive)
+- **process**: 2026-07-03-add-state-persistence: archived change is missing design.md and/or tasks.md

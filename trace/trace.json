@@ -35,133 +35,176 @@
     {
       "id": "FR-INPUT-01",
       "specs": [
-        "openspec/changes/add-score-input/specs/score-input/spec.md"
+        "openspec/specs/score-input/spec.md"
       ],
       "planned": null,
-      "tests": [],
+      "tests": [
+        "tests/unit/scoring.test.ts",
+        "evals/cases/a11y.eval.ts"
+      ],
       "recordings": []
     },
     {
       "id": "FR-INPUT-02",
       "specs": [
-        "openspec/changes/add-score-input/specs/score-input/spec.md"
+        "openspec/specs/score-input/spec.md"
       ],
       "planned": null,
-      "tests": [],
+      "tests": [
+        "tests/unit/scoring.test.ts",
+        "evals/cases/a11y.eval.ts"
+      ],
       "recordings": []
     },
     {
       "id": "FR-INPUT-03",
       "specs": [
-        "openspec/changes/add-score-input/specs/score-input/spec.md"
+        "openspec/specs/score-input/spec.md"
       ],
       "planned": null,
-      "tests": [],
+      "tests": [
+        "tests/unit/scoring.test.ts",
+        "evals/cases/transparency.eval.ts"
+      ],
       "recordings": []
     },
     {
       "id": "FR-FILTER-01",
       "specs": [
-        "openspec/changes/add-filtering/specs/filtering/spec.md"
+        "openspec/specs/filtering/spec.md"
       ],
       "planned": null,
-      "tests": [],
+      "tests": [
+        "tests/unit/recommend.test.ts"
+      ],
       "recordings": []
     },
     {
       "id": "FR-FILTER-02",
       "specs": [
-        "openspec/changes/add-filtering/specs/filtering/spec.md"
+        "openspec/specs/filtering/spec.md"
       ],
       "planned": null,
-      "tests": [],
+      "tests": [
+        "tests/unit/recommend.test.ts"
+      ],
       "recordings": []
     },
     {
       "id": "FR-SCORE-01",
       "specs": [
-        "openspec/changes/add-scoring-engine/specs/scoring-engine/spec.md"
+        "openspec/specs/scoring-engine/spec.md"
       ],
       "planned": null,
-      "tests": [],
+      "tests": [
+        "tests/unit/scoring.test.ts"
+      ],
       "recordings": []
     },
     {
       "id": "FR-SCORE-02",
       "specs": [
-        "openspec/changes/add-recommendations/specs/recommendations/spec.md",
-        "openspec/changes/add-scoring-engine/specs/scoring-engine/spec.md"
+        "openspec/specs/recommendations/spec.md",
+        "openspec/specs/scoring-engine/spec.md"
       ],
       "planned": null,
-      "tests": [],
+      "tests": [
+        "tests/unit/scoring.test.ts",
+        "evals/cases/format.eval.ts",
+        "evals/cases/honesty.eval.ts"
+      ],
       "recordings": []
     },
     {
       "id": "FR-SCORE-03",
       "specs": [
-        "openspec/changes/add-recommendations/specs/recommendations/spec.md",
-        "openspec/changes/add-scoring-engine/specs/scoring-engine/spec.md"
+        "openspec/specs/recommendations/spec.md",
+        "openspec/specs/scoring-engine/spec.md"
       ],
       "planned": null,
-      "tests": [],
+      "tests": [
+        "tests/unit/recommend.test.ts",
+        "tests/unit/scoring.test.ts",
+        "evals/cases/a11y.eval.ts",
+        "evals/cases/advice.eval.ts"
+      ],
       "recordings": []
     },
     {
       "id": "FR-DETAIL-01",
       "specs": [
-        "openspec/changes/add-program-detail/specs/program-detail/spec.md"
+        "openspec/specs/program-detail/spec.md"
       ],
       "planned": null,
-      "tests": [],
+      "tests": [
+        "tests/unit/recommend.test.ts",
+        "evals/cases/advice.eval.ts",
+        "evals/cases/transparency.eval.ts"
+      ],
       "recordings": []
     },
     {
       "id": "FR-COMPARE-01",
       "specs": [
-        "openspec/changes/add-comparison/specs/comparison/spec.md"
+        "openspec/specs/comparison/spec.md"
       ],
       "planned": null,
-      "tests": [],
+      "tests": [
+        "tests/unit/recommend.test.ts",
+        "tests/unit/storage.test.ts",
+        "evals/cases/advice.eval.ts",
+        "evals/cases/ux.eval.ts"
+      ],
       "recordings": []
     },
     {
       "id": "FR-LIST-01",
       "specs": [
-        "openspec/changes/add-shortlist/specs/shortlist/spec.md"
+        "openspec/specs/shortlist/spec.md"
       ],
       "planned": null,
-      "tests": [],
+      "tests": [
+        "tests/unit/storage.test.ts",
+        "evals/cases/ux.eval.ts"
+      ],
       "recordings": []
     },
     {
       "id": "FR-LIST-02",
       "specs": [
-        "openspec/changes/add-shortlist/specs/shortlist/spec.md"
+        "openspec/specs/shortlist/spec.md"
       ],
       "planned": null,
-      "tests": [],
+      "tests": [
+        "tests/unit/status.test.ts",
+        "evals/cases/a11y.eval.ts"
+      ],
       "recordings": []
     },
     {
       "id": "FR-STATE-01",
       "specs": [
-        "openspec/changes/add-score-input/specs/score-input/spec.md",
-        "openspec/changes/add-shortlist/specs/shortlist/spec.md",
-        "openspec/changes/add-state-persistence/specs/state-persistence/spec.md"
+        "openspec/specs/score-input/spec.md",
+        "openspec/specs/shortlist/spec.md",
+        "openspec/specs/state-persistence/spec.md"
       ],
       "planned": null,
-      "tests": [],
+      "tests": [
+        "tests/unit/storage.test.ts"
+      ],
       "recordings": []
     },
     {
       "id": "FR-UX-01",
       "specs": [
-        "openspec/changes/add-filtering/specs/filtering/spec.md",
-        "openspec/changes/add-recommendations/specs/recommendations/spec.md",
-        "openspec/changes/add-shortlist/specs/shortlist/spec.md"
+        "openspec/specs/filtering/spec.md",
+        "openspec/specs/recommendations/spec.md",
+        "openspec/specs/shortlist/spec.md"
       ],
       "planned": null,
-      "tests": [],
+      "tests": [
+        "evals/cases/ux.eval.ts"
+      ],
       "recordings": []
     }
   ],
@@ -170,62 +213,6 @@
     {
       "check": "plan-ownership",
       "msg": "docs/mvp-capability-plan.md not found - ownership check skipped (expected before Phase 3; mandatory at --release)"
-    },
-    {
-      "check": "test-trace",
-      "msg": "FR-INPUT-01 has no test annotated \"@trace FR-INPUT-01\""
-    },
-    {
-      "check": "test-trace",
-      "msg": "FR-INPUT-02 has no test annotated \"@trace FR-INPUT-02\""
-    },
-    {
-      "check": "test-trace",
-      "msg": "FR-INPUT-03 has no test annotated \"@trace FR-INPUT-03\""
-    },
-    {
-      "check": "test-trace",
-      "msg": "FR-FILTER-01 has no test annotated \"@trace FR-FILTER-01\""
-    },
-    {
-      "check": "test-trace",
-      "msg": "FR-FILTER-02 has no test annotated \"@trace FR-FILTER-02\""
-    },
-    {
-      "check": "test-trace",
-      "msg": "FR-SCORE-01 has no test annotated \"@trace FR-SCORE-01\""
-    },
-    {
-      "check": "test-trace",
-      "msg": "FR-SCORE-02 has no test annotated \"@trace FR-SCORE-02\""
-    },
-    {
-      "check": "test-trace",
-      "msg": "FR-SCORE-03 has no test annotated \"@trace FR-SCORE-03\""
-    },
-    {
-      "check": "test-trace",
-      "msg": "FR-DETAIL-01 has no test annotated \"@trace FR-DETAIL-01\""
-    },
-    {
-      "check": "test-trace",
-      "msg": "FR-COMPARE-01 has no test annotated \"@trace FR-COMPARE-01\""
-    },
-    {
-      "check": "test-trace",
-      "msg": "FR-LIST-01 has no test annotated \"@trace FR-LIST-01\""
-    },
-    {
-      "check": "test-trace",
-      "msg": "FR-LIST-02 has no test annotated \"@trace FR-LIST-02\""
-    },
-    {
-      "check": "test-trace",
-      "msg": "FR-STATE-01 has no test annotated \"@trace FR-STATE-01\""
-    },
-    {
-      "check": "test-trace",
-      "msg": "FR-UX-01 has no test annotated \"@trace FR-UX-01\""
     },
     {
       "check": "recording-evidence",
@@ -282,42 +269,6 @@
     {
       "check": "recording-evidence",
       "msg": "FR-UX-01 is not referenced by any recording manifest under docs/qa/"
-    },
-    {
-      "check": "active-changes",
-      "msg": "active change \"add-comparison\" is not archived"
-    },
-    {
-      "check": "active-changes",
-      "msg": "active change \"add-filtering\" is not archived"
-    },
-    {
-      "check": "active-changes",
-      "msg": "active change \"add-program-data\" is not archived"
-    },
-    {
-      "check": "active-changes",
-      "msg": "active change \"add-program-detail\" is not archived"
-    },
-    {
-      "check": "active-changes",
-      "msg": "active change \"add-recommendations\" is not archived"
-    },
-    {
-      "check": "active-changes",
-      "msg": "active change \"add-score-input\" is not archived"
-    },
-    {
-      "check": "active-changes",
-      "msg": "active change \"add-scoring-engine\" is not archived"
-    },
-    {
-      "check": "active-changes",
-      "msg": "active change \"add-shortlist\" is not archived"
-    },
-    {
-      "check": "active-changes",
-      "msg": "active change \"add-state-persistence\" is not archived"
     }
   ]
 }
