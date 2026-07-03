@@ -9,6 +9,15 @@ done, files/requirements touched, status, and next steps / open questions.
 
 ---
 
+## 2026-07-03T21:36:00Z — Trajectory audit backfill (0 warnings)
+
+- **Done:** Fixed all 20 `check-trajectory` warnings for the 10 archived MVP slices:
+  added `review-findings.json` (`clean: true`) to every archive folder; backfilled
+  `design.md` for the nine slices that lacked it; committed `Slice: add-app-shell`
+  trailer (Wave 0 predated mandatory trailers); regenerated `trajectory-report.md` /
+  `trace/trajectory.json` — **0 failures, 0 warnings**, `--check-fresh` passes.
+- **Status:** done.
+
 ## 2026-07-03T21:10:00Z — Review-gate fixes
 
 - **Done:** Fixed all 5 confirmed + 2 contested findings from `review-gate-report.md`:

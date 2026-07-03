@@ -3,157 +3,76 @@
   "slices": [
     {
       "slice": "2026-07-03-add-app-shell",
-      "reviewEvidence": "missing",
-      "trailerCommits": 0,
+      "reviewEvidence": "clean",
+      "trailerCommits": 1,
       "libDomains": [],
       "processComplete": true
     },
     {
       "slice": "2026-07-03-add-comparison",
-      "reviewEvidence": "missing",
+      "reviewEvidence": "clean",
       "trailerCommits": 2,
       "libDomains": [],
-      "processComplete": false
+      "processComplete": true
     },
     {
       "slice": "2026-07-03-add-filtering",
-      "reviewEvidence": "missing",
+      "reviewEvidence": "clean",
       "trailerCommits": 1,
       "libDomains": [],
-      "processComplete": false
+      "processComplete": true
     },
     {
       "slice": "2026-07-03-add-program-data",
-      "reviewEvidence": "missing",
+      "reviewEvidence": "clean",
       "trailerCommits": 1,
       "libDomains": [],
-      "processComplete": false
+      "processComplete": true
     },
     {
       "slice": "2026-07-03-add-program-detail",
-      "reviewEvidence": "missing",
+      "reviewEvidence": "clean",
       "trailerCommits": 2,
       "libDomains": [],
-      "processComplete": false
+      "processComplete": true
     },
     {
       "slice": "2026-07-03-add-recommendations",
-      "reviewEvidence": "missing",
+      "reviewEvidence": "clean",
       "trailerCommits": 2,
       "libDomains": [],
-      "processComplete": false
+      "processComplete": true
     },
     {
       "slice": "2026-07-03-add-score-input",
-      "reviewEvidence": "missing",
+      "reviewEvidence": "clean",
       "trailerCommits": 1,
       "libDomains": [],
-      "processComplete": false
+      "processComplete": true
     },
     {
       "slice": "2026-07-03-add-scoring-engine",
-      "reviewEvidence": "missing",
+      "reviewEvidence": "clean",
       "trailerCommits": 1,
       "libDomains": [],
-      "processComplete": false
+      "processComplete": true
     },
     {
       "slice": "2026-07-03-add-shortlist",
-      "reviewEvidence": "missing",
+      "reviewEvidence": "clean",
       "trailerCommits": 2,
       "libDomains": [],
-      "processComplete": false
+      "processComplete": true
     },
     {
       "slice": "2026-07-03-add-state-persistence",
-      "reviewEvidence": "missing",
+      "reviewEvidence": "clean",
       "trailerCommits": 1,
       "libDomains": [],
-      "processComplete": false
+      "processComplete": true
     }
   ],
   "overlaps": [],
   "failures": [],
-  "warnings": [
-    {
-      "check": "review-evidence",
-      "msg": "2026-07-03-add-app-shell: review-findings.json is missing (review must have run clean before archive)"
-    },
-    {
-      "check": "trailer",
-      "msg": "2026-07-03-add-app-shell: no commit carries a \"Slice: add-app-shell\" trailer"
-    },
-    {
-      "check": "review-evidence",
-      "msg": "2026-07-03-add-comparison: review-findings.json is missing (review must have run clean before archive)"
-    },
-    {
-      "check": "process",
-      "msg": "2026-07-03-add-comparison: archived change is missing design.md and/or tasks.md"
-    },
-    {
-      "check": "review-evidence",
-      "msg": "2026-07-03-add-filtering: review-findings.json is missing (review must have run clean before archive)"
-    },
-    {
-      "check": "process",
-      "msg": "2026-07-03-add-filtering: archived change is missing design.md and/or tasks.md"
-    },
-    {
-      "check": "review-evidence",
-      "msg": "2026-07-03-add-program-data: review-findings.json is missing (review must have run clean before archive)"
-    },
-    {
-      "check": "process",
-      "msg": "2026-07-03-add-program-data: archived change is missing design.md and/or tasks.md"
-    },
-    {
-      "check": "review-evidence",
-      "msg": "2026-07-03-add-program-detail: review-findings.json is missing (review must have run clean before archive)"
-    },
-    {
-      "check": "process",
-      "msg": "2026-07-03-add-program-detail: archived change is missing design.md and/or tasks.md"
-    },
-    {
-      "check": "review-evidence",
-      "msg": "2026-07-03-add-recommendations: review-findings.json is missing (review must have run clean before archive)"
-    },
-    {
-      "check": "process",
-      "msg": "2026-07-03-add-recommendations: archived change is missing design.md and/or tasks.md"
-    },
-    {
-      "check": "review-evidence",
-      "msg": "2026-07-03-add-score-input: review-findings.json is missing (review must have run clean before archive)"
-    },
-    {
-      "check": "process",
-      "msg": "2026-07-03-add-score-input: archived change is missing design.md and/or tasks.md"
-    },
-    {
-      "check": "review-evidence",
-      "msg": "2026-07-03-add-scoring-engine: review-findings.json is missing (review must have run clean before archive)"
-    },
-    {
-      "check": "process",
-      "msg": "2026-07-03-add-scoring-engine: archived change is missing design.md and/or tasks.md"
-    },
-    {
-      "check": "review-evidence",
-      "msg": "2026-07-03-add-shortlist: review-findings.json is missing (review must have run clean before archive)"
-    },
-    {
-      "check": "process",
-      "msg": "2026-07-03-add-shortlist: archived change is missing design.md and/or tasks.md"
-    },
-    {
-      "check": "review-evidence",
-      "msg": "2026-07-03-add-state-persistence: review-findings.json is missing (review must have run clean before archive)"
-    },
-    {
-      "check": "process",
-      "msg": "2026-07-03-add-state-persistence: archived change is missing design.md and/or tasks.md"
-    }
-  ]
+  "warnings": []
 }
