@@ -9,6 +9,13 @@ done, files/requirements touched, status, and next steps / open questions.
 
 ---
 
+## 2026-07-03T21:40:00Z — MVP capability plan (traceability 0 warnings)
+
+- **Done:** Authored `docs/mvp-capability-plan.md` (G3): slice table, dependency graph,
+  FR coverage for all 14 MVP FRs, wave order. Regenerated `traceability-report.md` /
+  `trace/trace.json` — **0 failures, 0 warnings**; `--check-fresh` passes.
+- **Status:** done.
+
 ## 2026-07-03T21:36:00Z — Trajectory audit backfill (0 warnings)
 
 - **Done:** Fixed all 20 `check-trajectory` warnings for the 10 archived MVP slices:

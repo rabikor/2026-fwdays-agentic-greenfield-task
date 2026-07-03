@@ -37,7 +37,7 @@
       "specs": [
         "openspec/specs/score-input/spec.md"
       ],
-      "planned": null,
+      "planned": true,
       "tests": [
         "tests/unit/scoring.test.ts",
         "evals/cases/a11y.eval.ts"
@@ -48,7 +48,7 @@
       "specs": [
         "openspec/specs/score-input/spec.md"
       ],
-      "planned": null,
+      "planned": true,
       "tests": [
         "tests/unit/scoring.test.ts",
         "evals/cases/a11y.eval.ts"
@@ -59,7 +59,7 @@
       "specs": [
         "openspec/specs/score-input/spec.md"
       ],
-      "planned": null,
+      "planned": true,
       "tests": [
         "tests/unit/scoring.test.ts",
         "evals/cases/transparency.eval.ts"
@@ -70,7 +70,7 @@
       "specs": [
         "openspec/specs/filtering/spec.md"
       ],
-      "planned": null,
+      "planned": true,
       "tests": [
         "tests/unit/recommend.test.ts"
       ]
@@ -80,7 +80,7 @@
       "specs": [
         "openspec/specs/filtering/spec.md"
       ],
-      "planned": null,
+      "planned": true,
       "tests": [
         "tests/unit/recommend.test.ts"
       ]
@@ -90,7 +90,7 @@
       "specs": [
         "openspec/specs/scoring-engine/spec.md"
       ],
-      "planned": null,
+      "planned": true,
       "tests": [
         "tests/unit/scoring.test.ts"
       ]
@@ -101,7 +101,7 @@
         "openspec/specs/recommendations/spec.md",
         "openspec/specs/scoring-engine/spec.md"
       ],
-      "planned": null,
+      "planned": true,
       "tests": [
         "tests/unit/scoring.test.ts",
         "evals/cases/format.eval.ts",
@@ -114,7 +114,7 @@
         "openspec/specs/recommendations/spec.md",
         "openspec/specs/scoring-engine/spec.md"
       ],
-      "planned": null,
+      "planned": true,
       "tests": [
         "tests/unit/recommend.test.ts",
         "tests/unit/scoring.test.ts",
@@ -127,7 +127,7 @@
       "specs": [
         "openspec/specs/program-detail/spec.md"
       ],
-      "planned": null,
+      "planned": true,
       "tests": [
         "tests/unit/recommend.test.ts",
         "evals/cases/advice.eval.ts",
@@ -139,7 +139,7 @@
       "specs": [
         "openspec/specs/comparison/spec.md"
       ],
-      "planned": null,
+      "planned": true,
       "tests": [
         "tests/unit/recommend.test.ts",
         "tests/unit/storage.test.ts",
@@ -152,7 +152,7 @@
       "specs": [
         "openspec/specs/shortlist/spec.md"
       ],
-      "planned": null,
+      "planned": true,
       "tests": [
         "tests/unit/storage.test.ts",
         "evals/cases/ux.eval.ts"
@@ -163,7 +163,7 @@
       "specs": [
         "openspec/specs/shortlist/spec.md"
       ],
-      "planned": null,
+      "planned": true,
       "tests": [
         "tests/unit/status.test.ts",
         "evals/cases/a11y.eval.ts"
@@ -176,7 +176,7 @@
         "openspec/specs/shortlist/spec.md",
         "openspec/specs/state-persistence/spec.md"
       ],
-      "planned": null,
+      "planned": true,
       "tests": [
         "tests/unit/storage.test.ts"
       ]
@@ -188,17 +188,12 @@
         "openspec/specs/recommendations/spec.md",
         "openspec/specs/shortlist/spec.md"
       ],
-      "planned": null,
+      "planned": true,
       "tests": [
         "evals/cases/ux.eval.ts"
       ]
     }
   ],
   "failures": [],
-  "warnings": [
-    {
-      "check": "plan-ownership",
-      "msg": "docs/mvp-capability-plan.md not found - ownership check skipped (expected before Phase 3; mandatory at --release)"
-    }
-  ]
+  "warnings": []
 }
