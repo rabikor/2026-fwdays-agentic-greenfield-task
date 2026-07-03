@@ -7,7 +7,7 @@ import { formatNumber } from "@/app/lib/format";
 import { getProgram } from "@/app/lib/programs";
 import { scoreBreakdown } from "@/app/lib/recommend";
 import { competitiveScore } from "@/app/lib/scoring";
-import { BENEFITS_ON, ELECTIVE, NO_BENEFITS, SCORES } from "./_fixtures";
+import { BENEFITS_ON, ELECTIVE, NO_BENEFITS, SCORES, TRANSPARENCY_QUALITY } from "./_fixtures";
 import type { EvalCase } from "./_types";
 import type { Benefits } from "@/app/lib/types";
 
@@ -35,6 +35,7 @@ export const cases: EvalCase[] = [
       "each row shows the subject, its weight (×), and the resulting contribution",
       "all four NMT subjects are represented",
       "numbers use the Ukrainian decimal comma",
+      TRANSPARENCY_QUALITY,
     ],
   },
   {
@@ -49,6 +50,7 @@ export const cases: EvalCase[] = [
       "CRITICAL: an explicit benefit/multiplier line is present and shows the +6 % effect",
       "CRITICAL: subject contributions plus the benefit line sum to the stated total",
       "the benefit's contribution is distinguishable from the subject contributions",
+      TRANSPARENCY_QUALITY,
     ],
   },
 ];

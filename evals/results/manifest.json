@@ -1,40 +1,40 @@
 {
-  "generatedAt": "2026-07-03T19:30:31Z",
+  "generatedAt": "2026-07-03T20:07:36Z",
   "kind": "eval",
   "results": [
     {
       "id": "honesty-global-disclaimer",
       "dimension": "honesty-framing",
       "proof": "BC-HONESTY-01",
-      "score": 96,
+      "score": 98,
       "pass": true
     },
     {
       "id": "honesty-detail-band-midchance",
       "dimension": "honesty-framing",
       "proof": "BC-HONESTY-01, FR-SCORE-02",
-      "score": 96,
+      "score": 97,
       "pass": true
     },
     {
       "id": "honesty-strong-profile-no-100",
       "dimension": "honesty-framing",
       "proof": "BC-HONESTY-01, FR-SCORE-02",
-      "score": 95,
+      "score": 98,
       "pass": true
     },
     {
       "id": "transparency-breakdown-sums",
       "dimension": "math-transparency",
       "proof": "FR-DETAIL-01",
-      "score": 96,
+      "score": 99,
       "pass": true
     },
     {
       "id": "transparency-breakdown-with-benefit",
       "dimension": "math-transparency",
       "proof": "FR-DETAIL-01, FR-INPUT-03",
-      "score": 92,
+      "score": 97,
       "pass": true
     },
     {
@@ -62,21 +62,21 @@
       "id": "compare-advice-three",
       "dimension": "comparison-advice",
       "proof": "FR-COMPARE-01",
-      "score": 94,
+      "score": 98,
       "pass": true
     },
     {
       "id": "compare-advice-two",
       "dimension": "comparison-advice",
       "proof": "FR-COMPARE-01",
-      "score": 95,
+      "score": 98,
       "pass": true
     },
     {
       "id": "compare-advice-midtier",
       "dimension": "comparison-advice",
       "proof": "FR-COMPARE-01",
-      "score": 95,
+      "score": 98,
       "pass": true
     },
     {
@@ -104,14 +104,14 @@
       "id": "format-percent",
       "dimension": "locale-format",
       "proof": "BC-LANG-01, FR-SCORE-02",
-      "score": 98,
+      "score": 100,
       "pass": true
     },
     {
       "id": "format-number-decimal-grouping",
       "dimension": "locale-format",
       "proof": "BC-LANG-01",
-      "score": 98,
+      "score": 100,
       "pass": true
     },
     {
@@ -139,7 +139,7 @@
       "id": "a11y-status-badge-in-text",
       "dimension": "a11y-signal",
       "proof": "NFR-A11Y-01, FR-LIST-02",
-      "score": 97,
+      "score": 98,
       "pass": true
     },
     {

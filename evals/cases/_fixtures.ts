@@ -16,3 +16,11 @@ export const ELECTIVE: ElectiveSubject = "Англійська";
  */
 export const MICROCOPY_QUALITY =
   "SCORING NOTE — production UI microcopy, short by design: if the criteria above are fully met, the copy is excellent (95–100). Deduct ONLY for genuine defects (wrong or misleading information, a missing/unclear user action, or unnatural Ukrainian). Do NOT deduct for brevity, for being 'a short snippet', or for 'not adding more than required' — concision is correct here.";
+
+/**
+ * Scoring anchor for the score-breakdown transparency dimension. The output is
+ * a compact, objective calculation; grade it on correctness/completeness, not
+ * on how much prose surrounds it.
+ */
+export const TRANSPARENCY_QUALITY =
+  "SCORING NOTE — objective score breakdown: if the arithmetic is correct and every subject line plus any benefit line sums to the stated total, the breakdown is fully correct and clear (95–100). Deduct ONLY for a real error (wrong arithmetic, a missing line, wrong locale formatting). Do NOT deduct for compact presentation or 'no extra explanation' — a correct, self-summing breakdown is exactly the goal.";

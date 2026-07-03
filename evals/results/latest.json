@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-07-03T19:30:31Z",
+  "generatedAt": "2026-07-03T20:07:36Z",
   "threshold": 70,
   "dimensions": {
-    "honesty-framing": 95.7,
-    "math-transparency": 94,
+    "honesty-framing": 97.7,
+    "math-transparency": 98,
     "category-advice": 97,
-    "comparison-advice": 94.7,
+    "comparison-advice": 98,
     "empty-state-guidance": 98,
-    "locale-format": 98,
-    "a11y-signal": 97
+    "locale-format": 99.3,
+    "a11y-signal": 97.3
   },
   "cases": [
     {
@@ -18,11 +18,11 @@
         "BC-HONESTY-01"
       ],
       "capability": "app-shell",
-      "score": 96,
+      "score": 98,
       "pass": true,
       "judges": 2,
       "disagreement": false,
-      "notes": "The disclaimer explicitly frames chances as an estimate based on historical data and not a guarantee of admission, satisfying the critical criterion. It correctly assigns final decisions to educational institutions and instructs users to treat the numbers as an orientation only. The Ukrainian is fluent, professional, and non-alarming, hitting every rubric point cleanly. | The two-sentence disclaimer satisfies every rubric criterion with distinct, unambiguous spans: it explicitly calls the chances an estimate based on historical data and 'не гарантія зарахування' (critical met), assigns final decisions to 'заклади освіти', and instructs using the numbers 'лише як орієнтир'. The Ukrainian is fluent, natural, and non-alarming. This is shippable as-is; withholding the top few points only for absence of any further polish beyond the minimum required."
+      "notes": "The microcopy satisfies every rubric criterion, including the critical one: it explicitly calls the chances an estimate based on historical data 'а не гарантія зарахування' (not a guarantee of enrollment). It correctly attributes final decisions to educational institutions ('Остаточні рішення ухвалюють заклади освіти') and frames the figures as orientation only ('лише як орієнтир'). The Ukrainian is fluent and non-alarming, and per the scoring note, brevity is correct here, so no deduction applies beyond a trivial margin. | The disclaimer explicitly frames chances as a historical-data estimate rather than a guarantee ('а не гарантія зарахування'), assigns final decisions to educational institutions ('Остаточні рішення ухвалюють заклади освіти'), and instructs users to treat the numbers as orientation only ('лише як орієнтир'). The Ukrainian is natural, precise, and non-alarming. Per the scoring note, no deduction applies for brevity, and there are no factual or linguistic defects; a single point is withheld only as a conservative margin."
     },
     {
       "id": "honesty-detail-band-midchance",
@@ -32,11 +32,11 @@
         "FR-SCORE-02"
       ],
       "capability": "program-detail",
-      "score": 96,
+      "score": 97,
       "pass": true,
       "judges": 2,
       "disagreement": false,
-      "notes": "The sentence frames 73 % explicitly as an estimate with a 60–83 % range ('це оцінка з діапазоном 60–83 %'), states plainly it is not a guarantee ('а не гарантія'), and attributes the range to year-to-year cutoff volatility ('коливання прохідного бала за роки'). All numerals use the Ukrainian space-before-% format. Both critical criteria and both secondary criteria are satisfied; nothing in the output is ambiguous or grudging. | The single sentence satisfies every rubric criterion with directly quotable spans: it frames 73 % as an estimate bounded by an explicit 60–83 % range, states plainly it is not a guarantee ('а не гарантія'), attributes the range to year-to-year cutoff fluctuation ('коливання прохідного бала за роки'), and uses the Ukrainian space-before-% format throughout. Both critical criteria are met, so the case passes. Slightly short of a perfect ship-unchanged score only because it is a lone sentence with no further reassurance context, but nothing in the rubric is unmet."
+      "notes": "All four substantive criteria, including both critical ones, are satisfied verbatim: the copy frames 73 % as an estimate with an explicit 60–83 % range, ties the range to year-to-year cutoff volatility ('коливання прохідного бала за роки'), explicitly denies a guarantee ('а не гарантія'), and uses the space-before-% Ukrainian format. The Ukrainian is natural and accurate with no misleading information. Per the scoring note, concision is correct here, so only minor stylistic polish separates it from a perfect score. | The output frames the 73 % chance as an estimate with an explicit 60–83 % range ('це оцінка з діапазоном 60–83 %'), explicitly disclaims a guarantee ('а не гарантія'), and attributes the range to year-to-year cutoff volatility ('коливання прохідного бала за роки'), with correct spaced Ukrainian percentage formatting. Both critical criteria and both non-critical criteria are fully met, and the Ukrainian reads naturally with no misleading information. Per the scoring note, concision is correct for this production microcopy, so no deduction applies for brevity."
     },
     {
       "id": "honesty-strong-profile-no-100",
@@ -46,11 +46,11 @@
         "FR-SCORE-02"
       ],
       "capability": "recommendations",
-      "score": 95,
+      "score": 98,
       "pass": true,
       "judges": 2,
       "disagreement": false,
-      "notes": "The output shows a chance of 86 % with a band of 80-91 % and category \\\"Надійно\\\", satisfying the text-format criterion. It never claims 100 % or a guaranteed place and explicitly states the estimate is \\\"не гарантія зарахування\\\", meeting the critical criterion. The honesty disclaimer about historical-data estimates and final decisions resting with institutions is paired with the strong chance. All three criteria are cleanly met; minor deduction only because the output is a compact snippet with no further nuance to ship-polish. | All three rubric criteria, including the gating critical one, are satisfied by explicit spans in the output. The chance is presented as 86 % with an 80–91 % band and category \\\"Надійно\\\", far below 100 %, and is explicitly framed as \\\"не гарантія зарахування\\\". The honesty disclaimer is present and directly paired with the strong chance. The output is concise, correct, and ships as-is; only trivially short of perfect since there is no further evidence to reward beyond the minimum required."
+      "notes": "The output caps well below 100 % (86 %) and explicitly disclaims any guarantee ('а не гарантія зарахування'), satisfying the critical criterion. It cleanly presents percentage, band (80–91 %), and category ('Надійно'), and pairs them with the full honesty disclaimer attributing final decisions to institutions. The Ukrainian is natural and accurate with no misleading information; per the scoring note, brevity is correct and not penalized. | All three substantive criteria are fully satisfied: the chance is 86 % (well below 100 %) and explicitly framed as not a guarantee, the percentage/band/category triple is present, and the honesty disclaimer directly accompanies the strong chance. The Ukrainian is natural, accurate, and idiomatic ('ухвалюють заклади освіти', 'лише як орієнтир'), with no misleading information or missing user guidance. Per the scoring note, brevity is correct here and not penalized, so the copy earns a near-top score."
     },
     {
       "id": "transparency-breakdown-sums",
@@ -59,11 +59,11 @@
         "FR-DETAIL-01"
       ],
       "capability": "program-detail",
-      "score": 96,
+      "score": 99,
       "pass": true,
       "judges": 2,
       "disagreement": false,
-      "notes": "The four contributions (53,2 + 48,3 + 36,3 + 13,8) sum exactly to the stated total of 151,6, satisfying the critical arithmetic-consistency criterion. Each row cleanly displays subject, weight, and contribution; all four NMT subjects appear; and every number uses the Ukrainian decimal comma. The weights also sum to 1,0 (0,35+0,3+0,25+0,1), reinforcing internal coherence, so the output is shippable as-is. | The four contributions sum precisely to the stated total of 151,6, satisfying the gating critical criterion. Every row follows the subject + ×weight + → contribution format, all four NMT subjects are present with weights summing to 1.0, and Ukrainian decimal commas are used consistently. This is a clean, shippable output with no defects against the rubric."
+      "notes": "Every subject line shows subject, weight, and contribution, and the four contributions (53,2 + 48,3 + 36,3 + 13,8) sum exactly to the stated total 151,6, satisfying the critical self-summing criterion. All four NMT subjects appear and every number uses the Ukrainian decimal comma. Per the scoring note, a correct, self-summing, locale-correct breakdown scores 95–100 with no deduction for compactness. | The breakdown lists all four NMT subjects with weight and contribution, uses the Ukrainian decimal comma throughout, and the four contributions sum exactly to the stated total of 151,6. Weights sum to 1.0 and no benefit line is expected since the scenario specifies no benefits. Per the scoring note, a correct, self-summing breakdown with no errors merits 95–100; compact presentation is explicitly not penalized."
     },
     {
       "id": "transparency-breakdown-with-benefit",
@@ -73,11 +73,11 @@
         "FR-INPUT-03"
       ],
       "capability": "program-detail",
-      "score": 92,
+      "score": 97,
       "pass": true,
       "judges": 2,
       "disagreement": false,
-      "notes": "Both critical criteria are satisfied: the +6% benefit line is explicit and the six lines sum exactly to the stated total (148,9 subject sum × 1,06 = 157,8, with the 8,9 benefit line being the 6% increment). The benefit is clearly labeled and distinguishable. The only blemish is minor notation inconsistency — subject lines show multiplier→contribution while the benefit's '→ 8,9' is the incremental add, not the product of ×1,06 — which prevents a ship-perfect 90+ ceiling but does not undermine correctness. | The benefit line 'Пільга (+6 %) ×1,06 → 8,9' is explicitly present and distinct from subject lines, satisfying criteria 1 and 3. The full breakdown sums exactly to the stated total 157,8, satisfying criterion 2. Both critical criteria are met and no criterion is unmet; a small deduction remains for the mildly inconsistent '×1,06 → 8,9' notation, which frames a multiplier but reports the additive 6% increment."
+      "notes": "All lines are arithmetically consistent: the four weighted subject contributions sum to 148,9, the +6% benefit line correctly shows 8,9 (6% of 148,9), and the whole set sums exactly to the stated total of 157,8. Both critical criteria are met, the benefit line is clearly labeled and distinguishable, and locale formatting is correct Ukrainian comma-decimals. Per the scoring note, a correct self-summing breakdown warrants 95–100 with no deduction for compactness; I hold at 97 as there is no error to penalize. | Every subject line plus the benefit line sums exactly to the stated total (148,9 + 8,9 = 157,8), the benefit line is explicit and shows the +6 % effect, and it is clearly distinguishable via the 'Пільга' label. The +6 % contribution (148,9 × 0,06 ≈ 8,9) is correct and the locale formatting is consistent. The only nit is the '×1,06 → 8,9' notation, where the ×1,06 factor does not literally produce 8,9 the way the other base×coeff lines do — a slight presentational inconsistency rather than an arithmetic error, so a small deduction under the scoring note."
     },
     {
       "id": "advice-safe",
@@ -91,7 +91,7 @@
       "pass": true,
       "judges": 2,
       "disagreement": false,
-      "notes": "All three substantive criteria are fully met: the framing as a 'Надійний вибір' matches the Safe/high (~96%) chance, it gives a concrete priority action (keep as a fallback below dream programs), and it supplies both the 93–97% range (which brackets the ~96% estimate) and the 40 budget seats. The Ukrainian reads naturally with no misleading information. Per the scoring note, no deduction for brevity; a minor deduction reflects that this is otherwise flawless production microcopy. | All three substantive criteria are fully met: the copy is consistent with a Safe/high chance, gives a concrete fallback-priority action, and includes both the 93–97% range and the 40 budget seats. The Ukrainian is natural and fluent with no misleading information (96% sits within the stated range). Per the scoring note, brevity is correct here and only genuine defects warrant deduction; none are present, so this sits at the top of the production-microcopy band."
+      "notes": "All three criteria are fully met: the copy frames the program as a 'Надійний вибір' consistent with the ~96% Safe chance, gives a concrete actionable priority instruction (keep it as a fallback below dream choices), and includes both the 93–97% range and the 40 budget seats for context. The Ukrainian is natural and idiomatic with no misleading information. Per the scoring note, brevity is correct and not penalized; a minor cap below 100 reflects only that nothing elevates it beyond solid, defect-free microcopy. | The copy correctly frames the program as a reliable/Safe choice ('Надійний вибір... майже напевно проходиш'), satisfying the critical criterion. It gives a concrete, sensible priority action (keep as a fallback, place below dream programs to avoid occupying a budget seat), and includes both the 93–97 % realistic range and the 40 budget seats with a useful gloss. The Ukrainian is natural and idiomatic, and the information is internally consistent with a ~96 % chance; per the scoring note, brevity is correct and no genuine defect is present, so only a minimal deduction is warranted."
     },
     {
       "id": "advice-real",
@@ -105,7 +105,7 @@
       "pass": true,
       "judges": 2,
       "disagreement": false,
-      "notes": "The microcopy fully satisfies all three criteria: it frames a ~73% chance as a Realistic/achievable outcome worth priority 1–2, gives a concrete priority placement plus a safety-net suggestion, and states the 60–83% range and 45 budget seats with helpful context. The Ukrainian is natural and idiomatic with no factual or clarity defects. Per the scoring note, brevity is correct and not penalized, so the copy lands in the 95–100 band. | All three substantive criteria, including the critical Realistic-chance framing, are explicitly satisfied by quoted spans: the copy labels the chance as 'Реальний', gives a concrete priority-1–2 placement with a backup suggestion, and supplies both the 60–83 % range and the 45 budget seats with context. The Ukrainian is natural and idiomatic, the ~73 % chance sits correctly within the stated range, and there is no misleading information or missing action. Per the scoring note, brevity is not a defect here, so only a marginal deduction from perfect."
+      "notes": "The microcopy correctly signals a Realistic chance ('бал близький до прохідного'), gives a concrete priority placement (пріоритетом 1–2) plus a sensible backup suggestion, and includes both the 60–83 % range and the 45-budget-seat context. The Ukrainian is natural and the information is accurate for a ~73 % case, with no misleading claims or unclear actions. Per the scoring note, brevity is correct here, so no deductions for concision; a minor point held back only because no genuine defect is present to fault. | All three substantive criteria are fully satisfied: the copy frames the ~73% program as a genuine 'Реальний шанс' worth priority 1–2, gives a concrete priority placement with a safety-net recommendation, and states the 60–83% range plus 45 budget seats. The Ukrainian is natural and idiomatic, the numbers are internally consistent (73% sits inside the 60–83 band), and there are no misleading claims or missing user actions. Per the scoring note, brevity is correct here and no genuine defect warrants a deduction beyond a marginal polish allowance."
     },
     {
       "id": "advice-dream",
@@ -119,7 +119,7 @@
       "pass": true,
       "judges": 2,
       "disagreement": false,
-      "notes": "The copy honestly frames the Reach program as low-chance (\"Шанс невисокий\") while explicitly noting admission is not ruled out (\"вступ не виключений\"), satisfying the critical criterion. It gives a concrete constructive action (list it as a lower priority behind realistic options, since trying costs nothing), and includes both the lo–hi range (7–18 %) and budget-seat context (30 seats, with a rationale about competition stability). The Ukrainian reads naturally and the information is accurate and coherent with an ~11 % chance; no genuine defects warrant deduction per the scoring note. | The critical criterion is satisfied: 'Шанс невисокий' paired with 'вступ не виключений' frames it as a long shot honestly without claiming impossibility. The constructive option (try it as a lower priority since an attempt costs nothing) and both required data points — the 7–18% range bracketing the ~11% figure and the 30 budget seats with a plausibility note — are present. The Ukrainian is natural and idiomatic, and the range is internally consistent with the scenario. Per the scoring note, no deductions for brevity; only a minor deduction for the range being slightly asymmetric but that is defensible, so near-top score."
+      "notes": "All three substantive criteria are fully met: the copy calls the chance low and below the cutoff yet explicitly not ruled out (satisfying the critical honest-but-not-impossible framing), gives a concrete constructive action (lower-priority attempt that costs nothing), and includes both the 7–18% range (bracketing the ~11%) and the 30 budget-seat context with a helpful note on competition stability. The Ukrainian is natural and idiomatic with no misleading information or unclear action. Per the scoring note, brevity is correct here, so no deduction for concision; a minor deduction only for how tightly it sits against perfection. | All three substantive criteria are fully satisfied: the copy honestly frames the ~11% program as a low chance ('Шанс невисокий') while explicitly noting it is not ruled out ('вступ не виключений'), offers the constructive action of placing it at lower priority as a try, and supplies both the 7–18% range and the 30 budget-seat context. The Ukrainian is natural and idiomatic with no misleading claims or unclear actions. Per the scoring note, brevity is correct here and no genuine defect is present, so the copy scores near the top."
     },
     {
       "id": "compare-advice-three",
@@ -128,11 +128,11 @@
         "FR-COMPARE-01"
       ],
       "capability": "comparison",
-      "score": 94,
+      "score": 98,
       "pass": true,
       "judges": 2,
       "disagreement": false,
-      "notes": "The output correctly names ХНУ (Психологія) at 96 % as the highest-chance option and instructs the user to set it as priority 1, satisfying the critical criterion. It states the chance figure and adds an accurate 10-percentage-point comparison to the next option (ЛНУ 86 %), making it actionable and unambiguous. All three criteria are met with clean, correct arithmetic; minor deduction only because it does not reference the third option (НаУКМА 73 %) for fuller context. | The output correctly identifies ХНУ (Психологія) at 96% as the highest-chance option among the three, states its chance, and recommends it as priority 1, satisfying the critical criterion and both supporting ones. The comparative math (96% vs 86% = 10 в.п.) is accurate and the phrasing is direct and actionable. Minor deduction only for lack of any framing of the other two options, but the rubric does not require it, so the output is essentially shippable."
+      "notes": "The microcopy correctly identifies the highest-chance option (ХНУ Психологія, 96 %) as the best pick, states its chance, and gives an unambiguous action ('постав його пріоритетом 1'). The comparison math is accurate (96 − 86 = 10 в. п. over ЛНУ) and the Ukrainian is natural. No factual or clarity defects; per the scoring note brevity is correct here, so it earns a near-perfect score. | All three criteria including the critical one are fully satisfied: the copy names ХНУ (Психологія) as the highest-chance option, cites its 96 % chance, and gives an unambiguous priority-1 action. The numbers are accurate (96 − 86 = 10 в. п., ЛНУ correctly identified as the next variant) and the Ukrainian is natural and idiomatic. Per the scoring note, brevity is correct here and no genuine defect is present, so this ships unchanged."
     },
     {
       "id": "compare-advice-two",
@@ -141,11 +141,11 @@
         "FR-COMPARE-01"
       ],
       "capability": "comparison",
-      "score": 95,
+      "score": 98,
       "pass": true,
       "judges": 2,
       "disagreement": false,
-      "notes": "The output correctly identifies УКУ (Журналістика) at 62 % as the higher-chance option and instructs the user to make it priority 1, satisfying the critical criterion. It states the chance (62 %) and gives an unambiguous, actionable directive with an accurate percentage-point delta (62 - 11 = 51 в. п.) over the alternative КНУ (11 %). All three criteria are cleanly met with correct arithmetic and clear phrasing. | The output correctly recommends УКУ (Журналістика) as priority 1, satisfying the sole critical criterion. It states the chance (62%) and is fully actionable and unambiguous, even correctly computing the 51 percentage-point gap over the 11% alternative. All three criteria are met with no ambiguity, so it comfortably passes; withheld a few points only because it is a single sentence with no framing beyond the bare recommendation."
+      "notes": "The microcopy recommends the higher-chance option УКУ as priority 1, states its 62% chance, and gives an unambiguous action. The arithmetic is correct (62 − 11 = 51) and it correctly uses 'в. п.' (percentage points) rather than '%' for the gap; the Ukrainian is natural. No factual, clarity, or language defects, so per the scoring note the copy sits in the 95–100 band. | The microcopy correctly recommends the higher-chance option (УКУ, 62%) as priority 1, states its chance, and gives an unambiguous action. The math is accurate (62 - 11 = 51 в. п.) and the Ukrainian is natural and idiomatic, including correct use of 'в. п.' (відсоткові пункти). Per the scoring note, concision is correct and there are no genuine defects; minor conservative deduction only, no substantive issues found."
     },
     {
       "id": "compare-advice-midtier",
@@ -154,11 +154,11 @@
         "FR-COMPARE-01"
       ],
       "capability": "comparison",
-      "score": 95,
+      "score": 98,
       "pass": true,
       "judges": 2,
       "disagreement": false,
-      "notes": "The output correctly names НаУКМА (Філологія) at 73 % as the highest-chance option and instructs the user to set it as priority 1, satisfying the critical criterion. It states the chance and accurately quantifies the 11 pp gap over the next option (УКУ, 62 %), and the single directive is clear and actionable. Deducted slightly only because the lowest option (ОНУ) is unmentioned, but the rubric does not require it. | The output correctly names НаУКМА (Філологія) as the highest-chance option at 73 % and instructs the user to set it as priority 1, satisfying the critical criterion. It states the chance and accurately quantifies the 11-percentage-point gap over the next option (УКУ 62 %), and the recommendation is a clear, actionable directive. Minor deduction only because it addresses just the top option rather than framing the full three-way comparison, but the rubric asks only for the priority-1 identification and gap, both delivered cleanly."
+      "notes": "The copy correctly names НаУКМА (Філологія) at 73 % as the highest-chance option and instructs the user to set it as priority 1, satisfying the critical criterion. It states the chance and accurately quantifies the gap over the next option (11 в. п. = 73−62), and the action is clear. The Ukrainian is natural and terminologically correct ('відсоткових пунктів'); per the scoring note, brevity is not penalized, so this ships essentially unchanged. | All three substantive criteria are fully met: the copy correctly names НаУКМА (Філологія) as the 73 % top option and priority 1, states its chance, and quantifies the gap (11 в. п. over УКУ at 62 %, arithmetically correct). The action 'постав його пріоритетом 1' is unambiguous, and the Ukrainian — including the abbreviation 'в. п.' for відсоткових пунктів — is natural and correct. Per the scoring note this is production microcopy where concision is correct, so no deduction for brevity; only a minor trim from perfect for lack of any defect to penalize."
     },
     {
       "id": "empty-recommendations",
@@ -171,7 +171,7 @@
       "pass": true,
       "judges": 2,
       "disagreement": false,
-      "notes": "The microcopy satisfies all three rubric criteria: it names the empty-category state without framing it as an error, offers two concrete next actions (switch risk category or adjust NMT scores), and uses natural friendly second-person Ukrainian. The reassurance that the list recalculates instantly is a helpful touch. Per the scoring note, brevity is correct here and no genuine defects (misleading info, missing action, unnatural language) are present. | All three substantive criteria are cleanly met: the copy states the empty condition softly ('поки порожньо'), then gives two concrete, location-specific next actions ('вгорі', 'зліва') and reassures the user the list recalculates instantly. The Ukrainian is natural, warm, and second-person. Per the scoring note, brevity is correct for production microcopy and no genuine defects (misleading info, unclear action, awkward phrasing) are present."
+      "notes": "The microcopy meets the critical criterion by naming two concrete next actions (switch risk category or adjust NMT scores) and reassuring that the list recalculates instantly. It frames the empty state as temporary ('поки порожньо') rather than an error, and uses natural, friendly second-person Ukrainian imperatives. Per the scoring note, brevity is correct here and there are no misleading statements or unnatural phrasing to deduct for. | This is production empty-state microcopy that satisfies every rubric criterion: it names the empty category as temporary rather than an error, gives two concrete and correctly-placed next actions with reassurance that the list recalculates instantly, and uses natural friendly second-person Ukrainian. Per the scoring note, concision is correct here and no genuine defect (misleading info, unclear action, or unnatural language) is present, so it scores in the 95–100 band."
     },
     {
       "id": "empty-comparison",
@@ -185,7 +185,7 @@
       "pass": true,
       "judges": 2,
       "disagreement": false,
-      "notes": "The empty-state microcopy satisfies all three criteria: it explains the empty state ('Поки порівнювати нема що'), gives the precise action including the ⇄ button and where to find it ('на картках рекомендацій'), and is warm and outcome-oriented. The Ukrainian is natural and idiomatic with no misleading information. Per the scoring note, concision is correct here, so no deduction for brevity; near-perfect production copy. | The empty-state microcopy names the exact action (add 2–3 options via the ⇄ button on recommendation cards), explains why the view is empty, and previews the comparison dimensions in a friendly imperative tone. The Ukrainian is natural and idiomatic with no misleading information. Per the scoring note, brevity is correct here and only genuine defects warrant deductions; I found none, hence a near-perfect score."
+      "notes": "The microcopy states why the view is empty, gives the exact action (add 2–3 options via the ⇄ button on recommendation cards), and adds a helpful payoff describing the comparison dimensions. The Ukrainian is natural and correctly matches the comparison dimensions (chance, passing score, cost, city). No misleading info or unclear action, and per the scoring note brevity is correct here, so it lands near the top of the range. | The critical instruction is fully satisfied: the copy states the empty reason and tells the user precisely how to proceed (add 2–3 options via the ⇄ button on recommendation cards), then reinforces the payoff dimensions. The Ukrainian is natural and idiomatic, tone is friendly and actionable, and there are no misleading or unclear elements. Per the scoring note, brevity is correct here and warrants no deduction, so this sits at the top of the production-microcopy band."
     },
     {
       "id": "empty-saved",
@@ -199,7 +199,7 @@
       "pass": true,
       "judges": 2,
       "disagreement": false,
-      "notes": "The empty-state copy names the exact action to add items (the ★ on recommendation cards), sets the expectation that applications are tracked here by status from «Збережено» to «Зараховано», and reads as natural, friendly, actionable Ukrainian. No misleading information or unclear action; concision is correct for production microcopy, so per the scoring note it lands near the top. | The empty-state copy names the exact add action (the ★ on recommendation cards), satisfying the sole critical criterion, and explicitly sets the expectation that applications will be tracked here by status ('від «Збережено» до «Зараховано»'). The Ukrainian is natural and idiomatic with a friendly imperative tone. Per the scoring note, no deduction for brevity; I find no misleading information or awkward phrasing, so it scores near the top."
+      "notes": "The empty-state copy names the exact add action (the ★ on recommendation cards), previewing the status pipeline from «Збережено» to «Зараховано», and reads as natural, friendly Ukrainian. All criteria including the critical one are fully met with no misleading or unnatural phrasing. Per the scoring note, brevity is correct here and warrants no deduction, so this is excellent production microcopy. | All three rubric criteria are fully satisfied: the copy names the exact ★ action on recommendation cards, explains that statuses are tracked here afterward (from «Збережено» to «Зараховано»), and reads as friendly and actionable. The Ukrainian is natural and accurate with no misleading information. Per the scoring note, brevity is correct here and not a defect, so it scores near the top."
     },
     {
       "id": "format-percent",
@@ -209,11 +209,11 @@
         "FR-SCORE-02"
       ],
       "capability": "app-shell",
-      "score": 98,
+      "score": 100,
       "pass": true,
       "judges": 2,
       "disagreement": false,
-      "notes": "The output is '54 %', which places a space between the number and the percent sign, satisfying the critical Ukrainian typographic requirement. It also shows a whole number with no trailing decimals. Both criteria are fully met with no ambiguity. | The output is exactly '54 %', which places a space between the numeral and the percent sign per the Ukrainian typographic standard, satisfying the critical criterion. It also carries no trailing decimals, satisfying the second criterion. Both rubric criteria are met verbatim, so the output is shippable as-is."
+      "notes": "The output '54 %' contains a space between the number and the percent sign, satisfying the critical Ukrainian typographic standard criterion. It also shows a whole number with no trailing decimals. Both rubric criteria are fully met by the exact rendered text. | The output '54 %' contains a space between the number and percent sign, satisfying the critical Ukrainian typographic requirement. It also has no trailing decimals, satisfying the second criterion. Both criteria are cleanly met with no ambiguity, so the output is shippable as-is."
     },
     {
       "id": "format-number-decimal-grouping",
@@ -222,11 +222,11 @@
         "BC-LANG-01"
       ],
       "capability": "app-shell",
-      "score": 98,
+      "score": 100,
       "pass": true,
       "judges": 2,
       "disagreement": false,
-      "notes": "The output \"Бал: 151,6 · Місць: 1 234\" satisfies both critical criteria: the decimal uses a comma (\"151,6\") and the thousands are grouped with a space (\"1 234\"), matching Ukrainian locale conventions. No rubric criterion is unmet, and the formatting is correct and shippable as-is. | Both gating criteria are satisfied exactly by the visible output: the score \\\"151,6\\\" uses a comma decimal separator, and the seat count \\\"1 234\\\" uses a space thousands separator. The Ukrainian-locale formatting matches the rubric precisely with no observable defects. Docked slightly only because there are no additional criteria to further validate robustness, but the output is shippable as-is."
+      "notes": "The output \"Бал: 151,6 · Місць: 1 234\" satisfies both critical criteria: the score uses a comma decimal separator (\"151,6\") and the seat count uses a space as the thousands separator (\"1 234\"). Both use correct Ukrainian locale formatting and no other rubric criteria exist. Nothing would need changing to ship this. | The output 'Бал: 151,6 · Місць: 1 234' satisfies both CRITICAL criteria verbatim: the decimal uses a comma (151,6) and the thousands are grouped with a space (1 234). There are no additional rubric criteria to penalize, so the output ships unchanged."
     },
     {
       "id": "format-date",
@@ -240,7 +240,7 @@
       "pass": true,
       "judges": 2,
       "disagreement": false,
-      "notes": "The output \"31 липня 2026 р.\" satisfies the critical criterion: it uses the genitive month form липня and follows day–month–year ordering. It also reads as a natural, idiomatic Ukrainian date with the standard р. year suffix. Both criteria are fully met with no defects. | The output \"31 липня 2026 р.\" correctly uses the genitive month form липня and day–month–year ordering, satisfying the critical criterion. It also reads as a natural, idiomatic Ukrainian date, including the customary \" р.\" suffix. Both criteria are cleanly met with no defects visible in the produced string."
+      "notes": "The output \"31 липня 2026 р.\" uses the genitive month form \"липня\" and correct day-month-year ordering, satisfying the critical criterion. The trailing \"р.\" abbreviation for рік makes it read as an idiomatic Ukrainian date. Both criteria are fully met with nothing to deduct. | The output \\\"31 липня 2026 р.\\\" satisfies the critical criterion exactly: genitive month липня in correct day–month–year order. The trailing \\\"р.\\\" is the conventional Ukrainian year abbreviation, so it reads naturally and idiomatically. Both criteria are met with no defects, warranting a near-perfect score."
     },
     {
       "id": "a11y-category-not-color-only",
@@ -254,7 +254,7 @@
       "pass": true,
       "judges": 2,
       "disagreement": false,
-      "notes": "The pill label states the category in words (\\\"Реально\\\") alongside the colored dot, satisfying the critical criterion. The screen-reader summary cleanly conveys chance (73 %), band (60–83 %), and category as text, and explicitly notes the category is duplicated in text so it survives without color. The Ukrainian is natural and accurate; no misleading information or defects, so near-full marks per the scoring note. | The category is explicitly stated as the word 'Реально' alongside the colored circle, satisfying the critical text-label requirement. The screen-reader summary carries all three data points as text (chance 73%, band 60–83%, category Реально), and it explicitly asserts the category is duplicated as text so it survives without color. The Ukrainian is natural and the information is accurate with no misleading claims; per the scoring note, concise production microcopy fully meeting the criteria scores in the 95–100 band."
+      "notes": "The gating criterion is met: the category 'Реально' is stated as a text word, not color alone. The screen-reader summary explicitly gives chance (73 %), band (60–83 %), and category, and the copy states the category is duplicated as text so it reads without color. The Ukrainian is natural and the information is accurate; per the scoring note this concise production microcopy earns a top score, with a minor deduction reserved only as a hedge against unseen context. | The critical criterion is satisfied: the category 'Реально' appears as an explicit text word alongside the colored circle, not by color alone. The SR summary states chance (73%), band (60–83%), and category as text, and the copy explicitly notes the category is duplicated in text so it survives color removal. The Ukrainian is natural and the information is accurate with no defects; per the scoring note, concision is correct and not penalized."
     },
     {
       "id": "a11y-ineligible-marker-in-text",
@@ -268,7 +268,7 @@
       "pass": true,
       "judges": 2,
       "disagreement": false,
-      "notes": "The critical criterion is met: the ineligible state is conveyed in plain text via both the label \\\"Інший предмет НМТ\\\" and the screen-reader description, not by color alone. The second criterion is met because the copy explicitly links the non-calculation to the mismatched NMT subject and offers a clear corrective action. The Ukrainian is natural and free of misleading information; per the scoring note this microcopy is essentially shippable, with only a hair off for the near-maximum. | The text label 'Інший предмет НМТ' states the ineligible state explicitly rather than relying on grey color, satisfying the critical criterion. The screen-reader description clearly explains the program is not scored because it accepts a different NMT subject and gives a concrete next action. The Ukrainian is fluent, the information is accurate, and no defect (misleading info, missing action, or unnatural phrasing) is present; per the scoring note, brevity is correct and not penalized."
+      "notes": "The critical criterion is met: the ineligible state is conveyed via an explicit text label ('Мітка: Інший предмет НМТ'), not color alone. The screen-reader description clearly explains the program is not scored because it accepts a different NMT subject and directs the user to pick a different fourth subject. The Ukrainian is natural and the action is unambiguous; no misleading information or defects, so it scores near the top of the microcopy range. | The label 'Інший предмет НМТ' communicates the ineligible/different-subject state in plain text, satisfying the critical criterion without relying on color. The screen-reader description clearly ties the missing score to the mismatched elective and provides an actionable next step ('обери інший четвертий предмет'). The Ukrainian is natural and the information is accurate, so per the scoring note this concise production microcopy lands at the top of the range with no genuine defects."
     },
     {
       "id": "a11y-status-badge-in-text",
@@ -278,11 +278,11 @@
         "FR-LIST-02"
       ],
       "capability": "shortlist",
-      "score": 97,
+      "score": 98,
       "pass": true,
       "judges": 2,
       "disagreement": false,
-      "notes": "The output states the application stage as an explicit Ukrainian word («Розглядається») and reinforces it with «стадія 3 з 5» plus the full ordered list of the five statuses, so the critical text-not-color requirement is fully met. The stage name is one of the defined five and is human-readable, and the meaning clearly survives color removal. The Ukrainian is natural and accurate with no misleading content; per the scoring note, concision is correct here, so only a minimal deduction for it being maximally terse rather than any real defect. | The output states the application stage as an explicit word («Розглядається»), satisfying the critical text-label requirement, and reinforces it with «стадія 3 з 5» plus the full five-status progression — so meaning fully survives color removal. The stage is one of the five defined, human-readable statuses. Ukrainian is natural and the microcopy has no misleading or unclear content; per the scoring note, no deduction for brevity applies, leaving only a minor discount from a perfect score."
+      "notes": "The output explicitly states the application stage as a text word «Розглядається» and even parenthetically notes «текст, не лише колір бейджа», satisfying the critical non-color-signal requirement. The stage is one of the five defined statuses, shown with its position (3 of 5) and the full ordered sequence, so meaning fully survives color removal. The Ukrainian is natural and the information is accurate; per the scoring note, concision is correct and no genuine defect exists, warranting a near-perfect score. | The output states the application stage as an explicit Ukrainian word («Розглядається»), positions it as «стадія 3 з 5» within the full five-stage sequence, so the meaning is entirely text-based and survives color removal. The Ukrainian is natural and the progression is accurate and unambiguous. Per the scoring note, this is production microcopy that fully meets all criteria with no genuine defects, so it scores in the 95–100 band; concision is correct here and not penalized."
     },
     {
       "id": "a11y-slider-value-in-text",
@@ -296,7 +296,7 @@
       "pass": true,
       "judges": 2,
       "disagreement": false,
-      "notes": "The microcopy explicitly exposes the numeric value as text ('значення 152', spoken '«152 бали»') and states directly that the value is conveyed textually rather than only by thumb position, satisfying the critical criterion. It clearly labels the subject ('Українська мова'), gives a human-readable value, and the meaning survives without seeing the slider. Ukrainian grammar is correct ('152 бали' plural form) with no misleading content, warranting a near-top score per the concision-friendly scoring note; a minimal deduction reflects only that it is a verdict-style description rather than a marginal edge. | The microcopy names the subject (\\\"Українська мова\\\"), the numeric value (152), and explicitly confirms the value is spoken as text via the screen reader (\\\"озвучує «152 бали» — значення передано текстом, а не лише позицією повзунка\\\"), directly satisfying the critical accessibility criterion. The Ukrainian is natural and grammatically correct (\\\"152 бали\\\" uses the proper plural form). All criteria are fully met with accurate, concise production copy, so per the scoring note it lands in the excellent band with no genuine defects to deduct for."
+      "notes": "The microcopy names the subject (Українська мова), exposes the numeric value as text spoken by the screen reader (\\\"152 бали\\\"), and explicitly states the value is conveyed as text rather than only via slider position — satisfying all three substantive criteria including the critical one. The Ukrainian is natural and accurate with no misleading information, so per the scoring note it lands in the excellent band; a marginal deduction only for stylistic tightness. | The microcopy explicitly states the value is conveyed as text and spoken by a screen reader ('озвучує «152 бали» — значення передано текстом, а не лише позицією повзунка'), satisfying the critical accessibility criterion. It clearly names the subject ('Українська мова') and gives a human-readable value (152), and the meaning is fully intelligible without seeing the slider. The Ukrainian is natural with correct numeral grammar ('152 бали'); per the scoring note, concision is correct and no genuine defect warrants deduction."
     }
   ]
 }

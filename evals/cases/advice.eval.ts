@@ -73,6 +73,7 @@ export const cases: EvalCase[] = [
       "CRITICAL: identifies ХНУ (Психологія) — the highest-chance option — as the best pick",
       "states its chance and recommends it as priority 1",
       "actionable and unambiguous",
+      MICROCOPY_QUALITY,
     ],
   },
   {
@@ -86,6 +87,7 @@ export const cases: EvalCase[] = [
       "CRITICAL: recommends УКУ (Журналістика) — the higher-chance option — as priority 1",
       "states its chance",
       "actionable and unambiguous",
+      MICROCOPY_QUALITY,
     ],
   },
   {
@@ -100,6 +102,7 @@ export const cases: EvalCase[] = [
       "CRITICAL: identifies НаУКМА (Філологія) — the highest-chance option (73 %) — as priority 1",
       "states its chance and quantifies the gap over the next option",
       "actionable and unambiguous",
+      MICROCOPY_QUALITY,
     ],
   },
 ];

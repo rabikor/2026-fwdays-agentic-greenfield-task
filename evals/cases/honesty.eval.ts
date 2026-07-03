@@ -6,7 +6,7 @@ import { DISCLAIMER_TEXT, honestyBandSentence } from "@/app/lib/copy";
 import { getProgram } from "@/app/lib/programs";
 import { cardSummary } from "@/app/lib/recommend";
 import { evaluate } from "@/app/lib/scoring";
-import { ELECTIVE, NO_BENEFITS, SCORES } from "./_fixtures";
+import { ELECTIVE, MICROCOPY_QUALITY, NO_BENEFITS, SCORES } from "./_fixtures";
 import type { EvalCase } from "./_types";
 
 const evalOf = (id: string) =>
@@ -25,6 +25,7 @@ export const cases: EvalCase[] = [
       "attributes the final decision to the institutions, not the app",
       "frames the numbers as guidance/orientation only",
       "written in clear, non-alarming Ukrainian",
+      MICROCOPY_QUALITY,
     ],
   },
   {
@@ -43,6 +44,7 @@ export const cases: EvalCase[] = [
       "CRITICAL: explicitly says it is not a guarantee",
       "explains the range comes from year-to-year cutoff volatility",
       "percentage uses the Ukrainian '54 %' format (space before %)",
+      MICROCOPY_QUALITY,
     ],
   },
   {
@@ -57,6 +59,7 @@ export const cases: EvalCase[] = [
       "CRITICAL: never presents the chance as 100 % or a guaranteed place (the model caps well below 100 %)",
       "shows a percentage, a band, and a category label in text",
       "pairs the strong chance with the honesty disclaimer",
+      MICROCOPY_QUALITY,
     ],
   },
 ];
