@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Generated dc-runtime bundle for docs template previews (not app code)
+    "docs/template/**",
   ]),
 ]);
 
