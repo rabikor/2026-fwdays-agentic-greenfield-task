@@ -9,6 +9,17 @@ done, files/requirements touched, status, and next steps / open questions.
 
 ---
 
+## 2026-07-03T21:45:00Z — CI trajectory fix (shallow git + freshness)
+
+- **Done:** Fixed CI `check-trajectory` failures from `actions/checkout` default
+  `fetch-depth: 1` (git log could not see feat commits with `Slice:` trailers).
+  Added `fetch-depth: 0` in `.github/workflows/ci.yml`; HEAD manifest commit
+  lists all 10 slice trailers for shallow-clone safety; trajectory report column
+  is now yes/no (not commit counts) so `--check-fresh` is stable.
+- **Verified:** shallow (`--depth 1`) and full clone both pass
+  `check-trajectory --check-fresh` with 0 warnings.
+- **Status:** done.
+
 ## 2026-07-03T21:40:00Z — MVP capability plan (traceability 0 warnings)
 
 - **Done:** Authored `docs/mvp-capability-plan.md` (G3): slice table, dependency graph,
