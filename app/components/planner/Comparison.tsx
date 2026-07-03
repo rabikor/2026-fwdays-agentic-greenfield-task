@@ -4,6 +4,7 @@ import { formatNumber, formatPercent } from "@/app/lib/format";
 import { getProgram } from "@/app/lib/programs";
 import { categoryLabel, compareAdvice, type ScoredProgram } from "@/app/lib/recommend";
 import { evaluate } from "@/app/lib/scoring";
+import { EMPTY } from "@/app/lib/copy";
 import type { ProfileApi } from "@/app/hooks/useProfile";
 
 /** Build the evaluated list for the currently-compared ids, in selection order. */
@@ -68,10 +69,8 @@ export function Comparison({ profile }: { profile: ProfileApi }) {
   if (compared.length < 2) {
     return (
       <div className="pk-empty">
-        <p className="pk-empty__title">Поки порівнювати нема що</p>
-        <p className="pk-empty__text">
-          Додай 2–3 варіанти кнопкою ⇄ на картках рекомендацій.
-        </p>
+        <p className="pk-empty__title">{EMPTY.comparison.title}</p>
+        <p className="pk-empty__text">{EMPTY.comparison.text}</p>
       </div>
     );
   }

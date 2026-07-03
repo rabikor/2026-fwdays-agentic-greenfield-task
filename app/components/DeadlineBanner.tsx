@@ -1,4 +1,5 @@
 import { formatDate } from "@/app/lib/format";
+import { DEADLINE_LEAD, deadlineText } from "@/app/lib/copy";
 
 /**
  * Global deadline banner slot (BC-DEADLINE-01, passive surface).
@@ -19,9 +20,7 @@ export function DeadlineBanner() {
         ⏳
       </span>
       <p className="pk-banner__text">
-        <strong>Дедлайн вступу.</strong> Орієнтовна дата завершення подачі заяв —{" "}
-        {formatDate(PLACEHOLDER_DEADLINE)}. Точні дати уточнюйте на офіційному
-        сайті вступної кампанії.
+        <strong>{DEADLINE_LEAD}</strong> {deadlineText(formatDate(PLACEHOLDER_DEADLINE))}
       </p>
     </div>
   );

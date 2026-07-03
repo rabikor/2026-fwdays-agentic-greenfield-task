@@ -5,6 +5,8 @@
  * No React, no storage: given a profile, produce scored + filtered + sorted
  * programs and the derived text (advice, score breakdown) the views render.
  */
+import { adviceBase } from "@/app/lib/copy";
+import { formatNumber, formatPercent } from "@/app/lib/format";
 import { PROGRAMS } from "@/app/lib/programs";
 import {
   CATEGORY_LABEL,
@@ -107,12 +109,17 @@ export function scoreBreakdown(
     const weight = program.coeff[key];
     if (!weight) return;
     const label = key === "eng" ? elective : REQUIRED_SUBJECTS[key];
-    rows.push({ label: `${label} ×${weight}`, value: scores[key] * weight });
+    // Weight in uk-UA (comma) so it reads consistently with the contribution.
+    rows.push({ label: `${label} ×${formatNumber(weight)}`, value: scores[key] * weight });
   });
   const bonus = benefitBonus(benefits);
   if (bonus > 0) {
+    const multiplier = formatNumber(1 + bonus, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
     rows.push({
-      label: `Пільга ×${(1 + bonus).toFixed(2)}`,
+      label: `Пільга (+${formatPercent(bonus * 100)}) ×${multiplier}`,
       value: rawScore(program, scores) * bonus,
     });
   }
@@ -125,15 +132,13 @@ export function scoreBreakdown(
  */
 export function adviceFor(program: Program, evaluation: Evaluation): string {
   const { chance, band } = evaluation;
-  const base =
-    chance >= 75
-      ? "Надійний вибір. Постав як запасний пріоритет, щоб точно вступити."
-      : chance >= 40
-        ? "Реально вступити. Подавай у пріоритеті 1–2."
-        : "Складно, але спробувати варто одним із пріоритетів — раптом конкурс просяде.";
+  const range =
+    band[0] === band[1]
+      ? `оцінка тримається близько ${formatPercent(band[0])}`
+      : `реалістичний діапазон — ${band[0]}–${band[1]} %`;
   return (
-    `${base} Діапазон з урахуванням коливань прохідного: ` +
-    `${band[0]}–${band[1]} %. Бюджетних місць: ${program.budgetSeats}.`
+    `${adviceBase(chance)} З поправкою на коливання прохідного бала ${range}. ` +
+    `Бюджетних місць — ${program.budgetSeats} (більше місць — стабільніший конкурс).`
   );
 }
 
@@ -143,12 +148,19 @@ export function adviceFor(program: Program, evaluation: Evaluation): string {
  */
 export function compareAdvice(scored: ScoredProgram[]): string {
   if (scored.length < 2) return "";
-  const best = [...scored].sort(
+  const sorted = [...scored].sort(
     (a, b) => b.evaluation.chance - a.evaluation.chance,
-  )[0];
+  );
+  const best = sorted[0];
+  const runnerUp = sorted[1];
+  const gap = best.evaluation.chance - runnerUp.evaluation.chance;
+  const contrast =
+    gap > 0
+      ? `Це на ${gap} в. п. більше за наступний варіант (${runnerUp.program.uni}, ${runnerUp.evaluation.chance} %)`
+      : `Нарівні з ${runnerUp.program.uni}`;
   return (
-    `${best.program.uni} (${best.program.spec}) — найвищий шанс серед обраних ` +
-    `(${best.evaluation.chance} %). Розглянь як пріоритет 1.`
+    `${best.program.uni} (${best.program.spec}) — найвищий шанс серед обраних: ` +
+    `${best.evaluation.chance} %. ${contrast}, тож постав його пріоритетом 1.`
   );
 }
 
@@ -157,6 +169,18 @@ export function categoryLabel(evaluation: Evaluation): string {
   return evaluation.fits
     ? CATEGORY_LABEL[evaluation.category]
     : "Інший предмет НМТ";
+}
+
+/**
+ * Screen-reader summary for a recommendation card (NFR-A11Y-01): the chance,
+ * band, and category IN TEXT, so the signal never depends on color alone.
+ */
+export function cardSummary(evaluation: Evaluation): string {
+  if (!evaluation.fits)
+    return "Ця програма приймає інший предмет НМТ, тому шанс для неї не розраховується — обери інший четвертий предмет, щоб побачити оцінку.";
+  const { chance, band, category } = evaluation;
+  const range = band[0] === band[1] ? "" : `, діапазон ${band[0]}–${band[1]} %`;
+  return `Шанс ${formatPercent(chance)}${range}, категорія ${CATEGORY_LABEL[category]}.`;
 }
 
 export { categoryOf };

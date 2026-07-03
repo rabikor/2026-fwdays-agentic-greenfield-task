@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { useProfile } from "@/app/hooks/useProfile";
 import { DATA_AS_OF, DATA_DISCLAIMER } from "@/app/lib/programs";
+import { HINT_RECOMPUTE } from "@/app/lib/copy";
 import { benefitBonus } from "@/app/lib/scoring";
 import {
   averageScore,
@@ -60,9 +61,7 @@ export function Planner() {
           />
           <ScorePanel profile={profile} />
           <FilterPanel profile={profile} />
-          <p className="pk-planner__hint">
-            Рухай слайдери — рекомендації й шанси перераховуються миттєво.
-          </p>
+          <p className="pk-planner__hint">{HINT_RECOMPUTE}</p>
           <p className="pk-planner__hint">
             {DATA_AS_OF}. {DATA_DISCLAIMER}
           </p>

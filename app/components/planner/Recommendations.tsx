@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { ProfileApi } from "@/app/hooks/useProfile";
 import type { CategoryFilter, ScoredProgram } from "@/app/lib/recommend";
 import { matchesCategory } from "@/app/lib/recommend";
+import { EMPTY } from "@/app/lib/copy";
 import { CategoryTabs } from "./CategoryTabs";
 import { ProgramCard } from "./ProgramCard";
 
@@ -31,10 +32,8 @@ export function Recommendations({
 
       {visible.length === 0 ? (
         <div className="pk-empty">
-          <p className="pk-empty__title">У цій категорії порожньо</p>
-          <p className="pk-empty__text">
-            Спробуй інший фільтр або зміни бали зліва — рекомендації оновляться.
-          </p>
+          <p className="pk-empty__title">{EMPTY.recommendations.title}</p>
+          <p className="pk-empty__text">{EMPTY.recommendations.text}</p>
         </div>
       ) : (
         <div

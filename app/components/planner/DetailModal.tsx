@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useId, useRef } from "react";
-import { formatNumber, formatPercent } from "@/app/lib/format";
+import { formatNumber } from "@/app/lib/format";
+import { honestyBandSentence } from "@/app/lib/copy";
 import { getProgram } from "@/app/lib/programs";
 import { adviceFor, categoryLabel, scoreBreakdown } from "@/app/lib/recommend";
 import { evaluate } from "@/app/lib/scoring";
@@ -186,8 +187,7 @@ export function DetailModal({
             marginTop: "var(--pk-space-3)",
           }}
         >
-          Шанс {formatPercent(evaluation.chance)} — це оцінка з діапазоном{" "}
-          {evaluation.band[0]}–{evaluation.band[1]} % через коливання прохідного бала за роки, а не гарантія.
+          {honestyBandSentence(evaluation.chance, evaluation.band[0], evaluation.band[1])}
         </p>
 
         <div style={{ display: "flex", gap: "10px", marginTop: "var(--pk-space-5)" }}>

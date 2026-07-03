@@ -1,9 +1,9 @@
 "use client";
 
-import { formatNumber, formatPercent } from "@/app/lib/format";
+import { formatNumber } from "@/app/lib/format";
 import type { ProfileApi } from "@/app/hooks/useProfile";
 import type { ScoredProgram } from "@/app/lib/recommend";
-import { categoryLabel } from "@/app/lib/recommend";
+import { cardSummary, categoryLabel } from "@/app/lib/recommend";
 import { ChanceRing } from "./ChanceRing";
 import { CategoryPill } from "./CategoryPill";
 
@@ -126,11 +126,7 @@ export function ProgramCard({
       </div>
 
       {/* Screen-reader summary keeps the chance % + band available in text. */}
-      <span className="pk-sr-only">
-        {evaluation.fits
-          ? `Шанс ${formatPercent(evaluation.chance)}, діапазон ${bandLabel}, категорія ${categoryLabel(evaluation)}.`
-          : "Ця програма приймає інший предмет НМТ."}
-      </span>
+      <span className="pk-sr-only">{cardSummary(evaluation)}</span>
     </article>
   );
 }

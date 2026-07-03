@@ -5,6 +5,7 @@ import { getProgram } from "@/app/lib/programs";
 import { categoryLabel } from "@/app/lib/recommend";
 import { evaluate } from "@/app/lib/scoring";
 import { STATUS_MODIFIER } from "@/app/lib/status";
+import { EMPTY } from "@/app/lib/copy";
 import type { ProfileApi } from "@/app/hooks/useProfile";
 
 /**
@@ -27,10 +28,8 @@ export function SavedList({
   if (ids.length === 0) {
     return (
       <div className="pk-empty">
-        <p className="pk-empty__title">Список порожній</p>
-        <p className="pk-empty__text">
-          Додавай варіанти зірочкою ★ на картках рекомендацій — і відстежуй статуси заяв тут.
-        </p>
+        <p className="pk-empty__title">{EMPTY.saved.title}</p>
+        <p className="pk-empty__text">{EMPTY.saved.text}</p>
       </div>
     );
   }

@@ -4,6 +4,8 @@
  * Persistent on every route: states that chances are estimates, never a
  * guarantee. Passive only — it does not compute or gate any chance value.
  */
+import { DISCLAIMER_TEXT } from "@/app/lib/copy";
+
 export function Disclaimer() {
   return (
     <aside className="pk-disclaimer" role="note" aria-label="Застереження">
@@ -11,11 +13,7 @@ export function Disclaimer() {
         <span className="pk-disclaimer__mark" aria-hidden="true">
           i
         </span>
-        <p className="pk-text-sm">
-          Шанси на вступ — це оцінка на основі історичних даних, а не гарантія
-          зарахування. Остаточні рішення ухвалюють заклади освіти; використовуйте
-          ці показники лише як орієнтир.
-        </p>
+        <p className="pk-text-sm">{DISCLAIMER_TEXT}</p>
       </div>
     </aside>
   );
