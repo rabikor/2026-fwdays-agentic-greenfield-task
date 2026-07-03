@@ -7,10 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test:run": "echo 'no unit tests yet — add Vitest in Phase 4/5' && exit 0",
+    "test:run": "vitest run",
+    "test:unit": "vitest run tests/unit",
     "test:integration": "echo 'no integration tests yet — add in Phase 5' && exit 0",
     "test:e2e": "echo 'no e2e tests yet — add Playwright in Phase 5' && exit 0",
-    "test:coverage": "echo 'no coverage yet — add with the unit layer' && exit 0",
+    "test:coverage": "vitest run --coverage",
     "qa:verify": "node scripts/qa-verify.mjs",
     "qa:record-demos": "node scripts/record-demos.mjs",
     "qa:record-proof": "node scripts/record-demos.mjs",
@@ -28,12 +29,17 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.2",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.0.3",
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
+    "jsdom": "^29.1.1",
     "tsx": "^4.23.0",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^4.1.9"
   }
 }
