@@ -15,7 +15,7 @@ Result: PASS, 20 warning(s)
 | 2026-07-03-add-filtering | **missing** | 1 | **no** | - |
 | 2026-07-03-add-program-data | **missing** | 1 | **no** | - |
 | 2026-07-03-add-program-detail | **missing** | 1 | **no** | - |
-| 2026-07-03-add-recommendations | **missing** | 1 | **no** | - |
+| 2026-07-03-add-recommendations | **missing** | 2 | **no** | - |
 | 2026-07-03-add-score-input | **missing** | 1 | **no** | - |
 | 2026-07-03-add-scoring-engine | **missing** | 1 | **no** | - |
 | 2026-07-03-add-shortlist | **missing** | 1 | **no** | - |

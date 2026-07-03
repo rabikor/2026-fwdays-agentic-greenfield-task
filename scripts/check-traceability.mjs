@@ -149,8 +149,10 @@ const isTestFile = (f) => /\.(test|spec|eval)\.(ts|tsx|js|mjs)$/.test(f) || /int
 for (const dir of PATHS.testDirs) {
   for (const file of walk(dir, isTestFile)) {
     const text = read(file) ?? "";
-    for (const m of text.matchAll(/@trace\s+([A-Z]+-\d+(?:\s*,\s*[A-Z]+-\d+)*)/g)) {
-      for (const id of m[1].split(/\s*,\s*/)) {
+    // Match the rest of each `@trace` line, then extract ids with the same
+    // categorized-aware pattern as `idsIn` (so `FR-SCORE-01` links, not just `FR-1`).
+    for (const m of text.matchAll(/@trace\s+([^\n]+)/g)) {
+      for (const id of idsIn(m[1])) {
         if (!testTraces.has(id)) testTraces.set(id, []);
         testTraces.get(id).push(file.replaceAll("\\", "/"));
       }
