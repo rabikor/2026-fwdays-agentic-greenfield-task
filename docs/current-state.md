@@ -9,6 +9,114 @@ done, files/requirements touched, status, and next steps / open questions.
 
 ---
 
+## 2026-07-03T00:00:00Z — Output-eval suite, test layer, sync+archive of all 9 MVP changes
+
+- **Done:** Completed the OpenSpec lifecycle and the quality layers for the MVP.
+  - **Sync + archive:** promoted all 9 capability deltas to baseline specs under
+    `openspec/specs/` (now 10 capabilities incl. `app-shell`) and moved the changes to
+    `openspec/changes/archive/2026-07-03-add-*`. No active changes remain.
+  - **Test layer (Vitest):** added `vitest.config.ts` + `tests/` — 41 tests
+    (unit: `scoring`/`recommend`/`status`/`storage`/`format`; component: `DetailModal`/
+    `Comparison`/`SavedList`). `tests/setup.ts` polyfills `localStorage` (Node 26 disables
+    jsdom's). Wired `test:run`/`test:unit`/`test:coverage`. All green.
+  - **Output-eval suite:** authored `evals/cases/*.eval.ts` (21 cases, 7 dimensions,
+    each `@trace`d) + `scripts/eval-collect.ts` driver. Ran the `eval-suite` workflow
+    (fresh `eval-judge`, maker≠checker, double-judged). Final per-dimension scores:
+    honesty 95.7, math 94, category-advice 97, comparison 94.7, empty-state 98,
+    locale 98, a11y 97. Established `quality/eval-baseline.json` (ratchet guards it).
+  - **Copy layer:** centralized user-facing strings in `app/lib/copy.ts`; refined advice,
+    empty states, honesty framing, and a11y summaries against the eval rubrics (degenerate
+    band handled, uk-UA coefficients, comparison contrast, priority-ordering advice).
+  - **Tooling:** `check-traceability.mjs` now recognizes categorized ids in `@trace`
+    (e.g. `FR-SCORE-01`) — test-trace warnings cleared.
+- **Verified:** `tsc` clean, `eslint` clean, 41 tests pass, `next build` green,
+  `openspec validate --strict` passed for all 9 before archive, traceability 0 failures,
+  eval ratchet OK. Manual smoke: production `next start` + fetch renders the planner SSR
+  (uk locale, program cards, rings, disclaimer). Interactive flows (save/advance-status/
+  compare/reload-persistence) verified via component + unit tests (`storage` round-trip
+  covers reload); no headless browser this session.
+- **Requirements:** all 14 MVP FRs (FR-INPUT/FILTER/SCORE/DETAIL/COMPARE/LIST/STATE/UX-*),
+  NFR-PERF/RESP/A11Y/PRIV, TC-STACK/STORAGE/DATA, BC-HONESTY/LANG/DEADLINE/PRIVACY.
+- **Status:** MVP complete. Quality goal **relaxed by the user from 95 % → 90 %**; all 7
+  eval dimensions are ≥94 (≥90 with margin), so the bar is met.
+- **Next steps:** demo recordings + `vision-verify` (Phase 6) and a global `review-gate`
+  (Phase 7) remain (currently traceability warnings only). If the 95 % bar is revived,
+  applying the microcopy rubric anchor to comparison + math dimensions and re-running
+  reliably clears it (calibration lifted 3 dims from ~93 → 97–98 in one round).
+
+## 2026-07-03T00:00:00Z — Backfilled OpenSpec change folders for the 3 UI capabilities
+
+- **Done:** Authored spec-driven OpenSpec change folders for the built UI slices in
+  `app/components/planner/` (backfill so code traces to spec). Each folder has
+  `.openspec.yaml`, `proposal.md` (Why / What Changes / Capabilities / Impact),
+  `specs/<cap>/spec.md` (`## ADDED Requirements` with SHALL + `(Traces: …)` and ≥1
+  scenario each), and `tasks.md`:
+  - `add-score-input` (capability `score-input`) — four validated NMT sliders (100–200,
+    `.pk-range`), the six-option elective picker (`.pk-chip`) that gates program
+    eligibility, and the three benefit toggles (`.pk-toggle-row`), all routed through
+    `useProfile` for instant recompute + persistence. Owns FR-INPUT-01/02/03; carries
+    NFR-PERF-01, NFR-A11Y-01, FR-STATE-01. Describes `ScorePanel.tsx`.
+  - `add-recommendations` (capability `recommendations`) — sorted card list (fitting
+    first by chance, non-fitting sink to bottom with a neutral "Інший предмет НМТ"
+    marker), chance ring + lo–hi band + traffic-light category pill (never color-only:
+    dot+label, ring aria-label, sr-only summary), `.pk-empty` state, persistent
+    disclaimer + `DATA_AS_OF` freshness. Owns FR-UX-01; renders FR-SCORE-02/03; carries
+    NFR-A11Y-01, BC-HONESTY-01. Describes `Recommendations/ProgramCard/ChanceRing/
+    CategoryPill/CategoryTabs.tsx` + `recommend.ts` selectors.
+  - `add-filtering` (capability `filtering`) — multi-select field & city chips from the
+    registry (combinable, AND across groups), risk-category tabs (Усі/Надійно/Реально/
+    Мрія) over computed categories, instant re-render, `.pk-empty` relax-filters hint.
+    Owns FR-FILTER-01/02; cites FR-UX-01; carries NFR-PERF-01, NFR-A11Y-01. Describes
+    `FilterPanel/CategoryTabs.tsx` + `selectPrograms`/`matchesCategory`.
+- **Verified:** `openspec validate add-score-input --strict`,
+  `openspec validate add-recommendations --strict`, and
+  `openspec validate add-filtering --strict` all report valid.
+- **Files touched:** `openspec/changes/{add-score-input,add-recommendations,add-filtering}/**`.
+- **Status:** done (specs authored + validated). Backfill/baseline for already-shipped
+  UI code — no new implementation work.
+- **Next steps:** author the remaining UI capability change folders (`program-detail`,
+  `comparison`, `shortlist`); note the planner components are not yet mounted in a page
+  (`app/page.tsx` is still the app-shell demo); archive the backfilled changes per the
+  OpenSpec loop once reviewed.
+
+---
+
+## 2026-07-03T00:00:00Z — Backfilled OpenSpec change folders for 3 built capabilities
+
+- **Done:** Authored spec-driven OpenSpec change folders documenting behavior that
+  already ships in `app/` (backfill so code traces to spec). Each folder has
+  `.openspec.yaml`, `proposal.md` (Why / What Changes / Capabilities / Impact),
+  `specs/<cap>/spec.md` (`## ADDED Requirements` with SHALL statements + `(Traces: …)`
+  and ≥1 scenario each), and `tasks.md`:
+  - `add-program-data` (capability `program-data`) — typed registry, 11 sample
+    programs, coefficients summing to 1.0, 3-year cutoff history, seats/cost/dorm/
+    electives, benefit catalog (village +0.02, quota +0.04, orphan +0.02), first-class
+    freshness metadata. Traces §10 data, TC-DATA-01, BC-HONESTY-01. Owns no FR.
+  - `add-scoring-engine` (capability `scoring-engine`) — §6 model exactly: competitive
+    score capped at 200, logistic chance clamped 2–98 with `k=3.0+min(1.4,seats/90)`,
+    uncertainty band with σ = population stdev floored at 1.6 (always returned),
+    category Safe≥75 / Realistic 40–74 / Reach<40. Traces FR-SCORE-01/02/03,
+    NFR-PERF-01, BC-HONESTY-01.
+  - `add-state-persistence` (capability `state-persistence`) — versioned `localStorage`
+    persistence of the full profile, SSR-safe `useSyncExternalStore` read with a stable
+    server snapshot, corruption/absence fresh-start fallback, on-device only / no
+    analytics, cyclic status progression. Traces FR-STATE-01, TC-STORAGE-01,
+    NFR-PRIV-01, BC-PRIVACY-01.
+- **Verified:** `openspec validate add-program-data --strict`,
+  `openspec validate add-scoring-engine --strict`, and
+  `openspec validate add-state-persistence --strict` all report valid.
+- **Files touched:** `openspec/changes/add-program-data/**`,
+  `openspec/changes/add-scoring-engine/**`, `openspec/changes/add-state-persistence/**`.
+  Specs describe `app/lib/{programs,types,scoring,storage,profileStore,status}.ts` and
+  `app/hooks/useProfile.ts`.
+- **Status:** done (specs authored + validated). These are backfill/baseline for
+  already-shipped code — no new implementation work.
+- **Next steps:** author the remaining UI capability change folders (`score-input`,
+  `recommendations`, `filtering`, `program-detail`, `comparison`, `shortlist`); archive
+  the backfilled changes per the OpenSpec loop once reviewed.
+
+---
+
 ## 2026-07-03T00:00:00Z — Implemented `app-shell` capability (Wave 0)
 
 - **Done:** Authored and applied OpenSpec change `add-app-shell` (proposal + spec +
