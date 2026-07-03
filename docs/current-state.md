@@ -13,9 +13,9 @@ done, files/requirements touched, status, and next steps / open questions.
 
 - **Done:** Fixed CI `check-trajectory` failures from `actions/checkout` default
   `fetch-depth: 1` (git log could not see feat commits with `Slice:` trailers).
-  Added `fetch-depth: 0` in `.github/workflows/ci.yml`; HEAD manifest commit
-  lists all 10 slice trailers for shallow-clone safety; trajectory report column
-  is now yes/no (not commit counts) so `--check-fresh` is stable.
+  Added `fetch-depth: 0` in `.github/workflows/ci.yml`; `review-findings.json`
+  now carries `sliceTrailer: true` as shallow-clone fallback; trajectory report
+  trailer column is yes/no (not commit counts) so `--check-fresh` is stable.
 - **Verified:** shallow (`--depth 1`) and full clone both pass
   `check-trajectory --check-fresh` with 0 warnings.
 - **Status:** done.
