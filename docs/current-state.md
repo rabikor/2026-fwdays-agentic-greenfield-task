@@ -9,6 +9,26 @@ done, files/requirements touched, status, and next steps / open questions.
 
 ---
 
+## 2026-07-03T21:10:00Z — Review-gate fixes
+
+- **Done:** Fixed all 5 confirmed + 2 contested findings from `review-gate-report.md`:
+  capped `scoreBreakdown` sums to competitive score; neutral `adviceFor` + modal honesty
+  text for non-fitting programs; comparison chance row includes text category label;
+  `loadState` sanitizes localStorage shape; removed stale saved-list deadline banner;
+  empty-filter hint mentions field/city; `adviceBase` uses shared thresholds.
+- **Verified:** 47 tests pass (`npm run test:run`).
+- **Status:** done.
+
+## 2026-07-03T21:01:00Z — Global review-gate (Phase 7)
+
+- **Done:** Ran global `review-gate` over `cbc51f1..HEAD` (correctness + security +
+  spec-compliance). Report: `docs/qa/review-gate-report.md`.
+- **Result:** 5 confirmed (breakdown sum cap, non-fitting advice in modal, comparison
+  color-only chance, localStorage shape crash, saved-list deadline banner), 2 contested,
+  2 rejected/track-only.
+- **Status:** review complete — findings fixed; optional re-run for G7 sign-off.
+- **Next steps:** commit fixes; push if desired.
+
 ## 2026-07-03T00:00:00Z — Output-eval suite, test layer, sync+archive of all 9 MVP changes
 
 - **Done:** Completed the OpenSpec lifecycle and the quality layers for the MVP.
@@ -43,7 +63,7 @@ done, files/requirements touched, status, and next steps / open questions.
 - **Status:** MVP complete; **all 7 eval dimensions ≥95** (min 97) — the original
   quality bar is met. (The user had relaxed it to 90 mid-way; rubric calibration then
   cleared 95 reliably, so it was taken to the original target.)
-- **Next steps:** global `review-gate` (Phase 7).
+- **Next steps:** fix `review-gate` findings (`docs/qa/review-gate-report.md`).
 
 ## 2026-07-03T00:00:00Z — Backfilled OpenSpec change folders for the 3 UI capabilities
 

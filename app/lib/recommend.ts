@@ -12,6 +12,7 @@ import {
   CATEGORY_LABEL,
   benefitBonus,
   categoryOf,
+  competitiveScore,
   evaluate,
   rawScore,
   type Evaluation,
@@ -109,7 +110,6 @@ export function scoreBreakdown(
     const weight = program.coeff[key];
     if (!weight) return;
     const label = key === "eng" ? elective : REQUIRED_SUBJECTS[key];
-    // Weight in uk-UA (comma) so it reads consistently with the contribution.
     rows.push({ label: `${label} ×${formatNumber(weight)}`, value: scores[key] * weight });
   });
   const bonus = benefitBonus(benefits);
@@ -123,6 +123,12 @@ export function scoreBreakdown(
       value: rawScore(program, scores) * bonus,
     });
   }
+  const total = competitiveScore(program, scores, benefits);
+  const sum = rows.reduce((acc, row) => acc + row.value, 0);
+  if (sum > 0 && Math.abs(sum - total) > 1e-6) {
+    const factor = total / sum;
+    return rows.map((row) => ({ ...row, value: row.value * factor }));
+  }
   return rows;
 }
 
@@ -131,6 +137,13 @@ export function scoreBreakdown(
  * folding in the band and the number of state-funded seats for honesty/context.
  */
 export function adviceFor(program: Program, evaluation: Evaluation): string {
+  if (!evaluation.fits) {
+    return (
+      "Ця програма приймає інший четвертий предмет НМТ — шанс для неї не є " +
+      "орієнтиром для твого профілю. Обери відповідний предмет зліва або " +
+      "програму зі свого списку рекомендацій."
+    );
+  }
   const { chance, band } = evaluation;
   const range =
     band[0] === band[1]

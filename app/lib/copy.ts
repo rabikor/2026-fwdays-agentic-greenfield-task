@@ -5,6 +5,7 @@
  * exact same text (evals/cases/*.eval.ts import from here).
  */
 import { formatPercent } from "@/app/lib/format";
+import { REAL_THRESHOLD, SAFE_THRESHOLD } from "@/app/lib/scoring";
 
 /** Global honesty disclaimer (BC-HONESTY-01), shown on every route. */
 export const DISCLAIMER_TEXT =
@@ -22,7 +23,7 @@ export const deadlineText = (dateLabel: string) =>
 export const EMPTY = {
   recommendations: {
     title: "У цій категорії поки порожньо",
-    text: "Обери іншу категорію ризику вгорі або зміни бали НМТ зліва — список одразу перерахується.",
+    text: "Обери іншу категорію ризику вгорі, зміни бали НМТ або познач менше напрямів і міст зліва — список одразу перерахується.",
   },
   comparison: {
     title: "Поки порівнювати нема що",
@@ -40,9 +41,9 @@ export const HINT_RECOMPUTE =
 
 /** Category-appropriate advice base (§6 recommendations). */
 export function adviceBase(chance: number): string {
-  if (chance >= 75)
+  if (chance >= SAFE_THRESHOLD)
     return "Надійний вибір: конкурсний бал упевнено перевищує торішній прохідний, тож ти майже напевно проходиш. Тримай програму запасним пріоритетом — постав нижче за омріяні, щоб не зайняти нею бюджетне місце, якщо пройдеш вище.";
-  if (chance >= 40)
+  if (chance >= REAL_THRESHOLD)
     return "Реальний шанс на бюджет: бал близький до прохідного, усе вирішить цьогорічний конкурс. Постав програму пріоритетом 1–2, а поряд додай надійніший варіант для підстраховки.";
   return "Шанс невисокий — бал нижчий за торішній прохідний, — але вступ не виключений. Постав програму нижчим пріоритетом за реалістичні: спроба нічого не коштує, а якщо конкурс просяде, з’явиться нагода.";
 }

@@ -62,9 +62,13 @@ function hydrate(): void {
   if (stored) {
     current = {
       ...current,
-      ...stored,
-      scores: { ...current.scores, ...stored.scores },
-      benefits: { ...current.benefits, ...stored.benefits },
+      ...(stored.scores ? { scores: { ...current.scores, ...stored.scores } } : {}),
+      ...(stored.benefits ? { benefits: { ...current.benefits, ...stored.benefits } } : {}),
+      ...(stored.elective !== undefined ? { elective: stored.elective } : {}),
+      ...(stored.fields !== undefined ? { fields: stored.fields } : {}),
+      ...(stored.cities !== undefined ? { cities: stored.cities } : {}),
+      ...(stored.saved !== undefined ? { saved: stored.saved } : {}),
+      ...(stored.compare !== undefined ? { compare: stored.compare } : {}),
     };
   }
 }

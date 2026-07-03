@@ -29,11 +29,16 @@ interface Row {
 const ROWS: Row[] = [
   {
     label: "Шанс",
-    cell: (s) => ({
-      text: s.evaluation.fits ? formatPercent(s.evaluation.chance) : "—",
-      color: s.evaluation.fits ? `var(--pk-${s.evaluation.category})` : "var(--pk-slate-400)",
-      bold: true,
-    }),
+    cell: (s) => {
+      if (!s.evaluation.fits) {
+        return { text: "—", color: "var(--pk-slate-400)", bold: true };
+      }
+      return {
+        text: `${formatPercent(s.evaluation.chance)} · ${categoryLabel(s.evaluation)}`,
+        color: `var(--pk-${s.evaluation.category})`,
+        bold: true,
+      };
+    },
   },
   {
     label: "Діапазон",

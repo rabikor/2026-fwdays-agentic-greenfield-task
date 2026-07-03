@@ -187,7 +187,9 @@ export function DetailModal({
             marginTop: "var(--pk-space-3)",
           }}
         >
-          {honestyBandSentence(evaluation.chance, evaluation.band[0], evaluation.band[1])}
+          {evaluation.fits
+            ? honestyBandSentence(evaluation.chance, evaluation.band[0], evaluation.band[1])
+            : "Шанс для цієї програми не розраховується — обраний четвертий предмет НМТ не відповідає вимогам програми."}
         </p>
 
         <div style={{ display: "flex", gap: "10px", marginTop: "var(--pk-space-5)" }}>

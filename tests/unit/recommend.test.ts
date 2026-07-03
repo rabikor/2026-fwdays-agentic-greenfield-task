@@ -61,6 +61,15 @@ describe("scoreBreakdown (FR-DETAIL-01)", () => {
     const sum = rows.reduce((a, r) => a + r.value, 0);
     expect(sum).toBeCloseTo(competitiveScore(program, SCORES, benefits), 6);
   });
+  it("scales rows when the competitive score is capped at 200", () => {
+    const maxScores: Scores = { ukr: 200, math: 200, hist: 200, eng: 200 };
+    const allBenefits: Benefits = { village: true, quota: true, orphan: true };
+    const program = getProgram("lnu-s")!;
+    const rows = scoreBreakdown(program, maxScores, allBenefits, "Англійська");
+    const sum = rows.reduce((a, r) => a + r.value, 0);
+    expect(competitiveScore(program, maxScores, allBenefits)).toBe(200);
+    expect(sum).toBeCloseTo(200, 6);
+  });
 });
 
 describe("adviceFor / cardSummary category consistency (FR-SCORE-03)", () => {
@@ -69,6 +78,13 @@ describe("adviceFor / cardSummary category consistency (FR-SCORE-03)", () => {
     const text = adviceFor(safe.program, safe.evaluation);
     expect(text).toContain("Надійний вибір");
     expect(text).toContain("Бюджетних місць");
+  });
+  it("returns neutral copy when the program does not fit the elective", () => {
+    const program = getProgram("knu-j")!;
+    const ineligible = evaluate(program, SCORES, NONE, "Біологія");
+    const text = adviceFor(program, ineligible);
+    expect(text).toContain("інший четвертий предмет НМТ");
+    expect(text).not.toContain("Надійний вибір");
   });
   it("cardSummary states the ineligible case in text, not color", () => {
     const program = getProgram("knu-j")!;

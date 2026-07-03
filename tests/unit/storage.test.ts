@@ -39,6 +39,26 @@ describe("storage round-trip (FR-STATE-01, TC-STORAGE-01)", () => {
     expect(loadState()).toBeNull();
   });
 
+  it("drops malformed fields instead of returning unsafe shapes", () => {
+    window.localStorage.setItem(
+      "prokhidnyi.v1",
+      JSON.stringify({ saved: null, compare: "not-an-array", scores: { ukr: "bad" } }),
+    );
+    expect(loadState()).toBeNull();
+  });
+
+  it("keeps only valid fields from a partially corrupt payload", () => {
+    window.localStorage.setItem(
+      "prokhidnyi.v1",
+      JSON.stringify({
+        scores: sample.scores,
+        compare: null,
+        saved: { bad: { status: "nope", priority: "x" } },
+      }),
+    );
+    expect(loadState()).toEqual({ scores: sample.scores, saved: {} });
+  });
+
   it("clearState removes persisted data", () => {
     saveState(sample);
     clearState();

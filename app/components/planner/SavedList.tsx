@@ -36,13 +36,6 @@ export function SavedList({
 
   return (
     <section aria-label="Збережені програми">
-      <div className="pk-banner" role="note" style={{ marginBottom: "var(--pk-space-4)" }}>
-        <span className="pk-banner__num" aria-hidden="true">
-          3
-        </span>
-        <p className="pk-banner__text">дні до дедлайну подачі пріоритетів</p>
-      </div>
-
       <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: "12px" }}>
         {ids.map((id) => {
           const program = getProgram(id);
