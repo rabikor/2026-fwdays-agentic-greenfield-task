@@ -108,9 +108,9 @@
   display: grid; place-items: center;
   font: 700 11px var(--pk-font-display);
 }
-.pk-ring--safe  .pk-ring__val { color: var(--pk-safe); }
-.pk-ring--real  .pk-ring__val { color: var(--pk-real); }
-.pk-ring--dream .pk-ring__val { color: var(--pk-dream); }
+.pk-ring--safe  .pk-ring__val { color: var(--pk-safe-text); }
+.pk-ring--real  .pk-ring__val { color: var(--pk-real-text); }
+.pk-ring--dream .pk-ring__val { color: var(--pk-dream-text); }
 .pk-ring--lg { width: 74px; height: 74px; }
 .pk-ring--lg .pk-ring__val { font-size: 17px; }
 

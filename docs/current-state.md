@@ -9,6 +9,19 @@ done, files/requirements touched, status, and next steps / open questions.
 
 ---
 
+## 2026-07-04T01:12:00Z — QA hardening (E2E, a11y, vision, trajectory, coverage)
+
+- **Done:** Implemented review recommendations without commit:
+  - **Playwright E2E:** 5 flows (`tests/e2e/planner-flow.e2e.ts`), `playwright.config.ts`, real `test:e2e` script.
+  - **axe a11y:** wired into `qa:verify` + CI via `run-with-server.mjs`; `docs/qa/a11y-report.md`; light-only scheme; token contrast fixes (WCAG AA).
+  - **trajectory-eval:** `scripts/run-trajectory-eval.mjs` → `docs/qa/trajectory-eval-report.md` + `evals/results/trajectory-*.json` (40/40 pass).
+  - **vision-verify:** `scripts/record-vision-stills.mjs` → 3 PNG stills + `docs/qa/vision-report.md` (3/3 met).
+  - **coverage ratchet:** `quality/coverage-baseline.json` (~71.6% lines); G5 PASS.
+  - **CI:** `workflow_dispatch`, `submission` branch push, `permissions`, eval + a11y steps; removed unused DB/auth env.
+  - **UI:** Detail modal shows «Діапазон невизначеності» line (BC-HONESTY-01).
+- **Verified:** `npm run qa:verify` green; `gate:status` G5 PASS; E2E 5/5; axe 0 serious.
+- **Status:** done.
+
 ## 2026-07-03T21:45:00Z — CI trajectory fix (shallow git + freshness)
 
 - **Done:** Fixed CI `check-trajectory` failures from `actions/checkout` default

@@ -35,6 +35,12 @@ const commands = [
     name: "browser-e2e-tests",
     command: "npm",
     args: ["run", "test:e2e"],
+    env: { CI: "true" },
+  },
+  {
+    name: "accessibility-axe",
+    command: "node",
+    args: ["scripts/run-with-server.mjs", "node", "scripts/check-a11y.mjs"],
   },
   {
     // Guards the committed eval score (quality bar). Needs evals/results/
@@ -42,6 +48,11 @@ const commands = [
     name: "eval-ratchet",
     command: "node",
     args: ["scripts/check-eval-ratchet.mjs"],
+  },
+  {
+    name: "coverage-ratchet",
+    command: "node",
+    args: ["scripts/check-coverage-ratchet.mjs"],
   },
   {
     name: "lint",
@@ -70,7 +81,7 @@ const results = [];
 
 for (const entry of commands) {
   console.log(`\n==> ${entry.name}`);
-  const result = await run(entry.command, entry.args);
+  const result = await run(entry.command, entry.args, entry.env ?? {});
   results.push({
     name: entry.name,
     command: [entry.command, ...entry.args].join(" "),
@@ -92,12 +103,12 @@ const failed = results.find((result) => result.exitCode !== 0);
 console.log(`\nWrote ${outputPath}`);
 process.exitCode = failed ? failed.exitCode : 0;
 
-function run(command, args) {
+function run(command, args, extraEnv = {}) {
   return new Promise((resolve) => {
     const child = spawn(command, args, {
       cwd: root,
       shell: process.platform === "win32",
-      env: process.env,
+      env: { ...process.env, ...extraEnv },
     });
     let output = "";
     child.stdout.on("data", (chunk) => {

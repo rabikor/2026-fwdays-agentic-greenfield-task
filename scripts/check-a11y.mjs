@@ -13,9 +13,9 @@
 import { chromium } from "@playwright/test";
 import AxeBuilder from "@axe-core/playwright";
 
-const BASE_URL = process.env.BASE_URL ?? "http://localhost:3000";
+const BASE_URL = process.env.BASE_URL ?? "http://localhost:3010";
 const ROUTES = (process.env.A11Y_ROUTES ?? "/").split(",").map((s) => s.trim()).filter(Boolean);
-const SCHEMES = ["light", "dark"];
+const SCHEMES = (process.env.A11Y_SCHEMES ?? "light").split(",").map((s) => s.trim()).filter(Boolean);
 
 async function ensureServer() {
   for (let i = 0; i < 60; i++) {

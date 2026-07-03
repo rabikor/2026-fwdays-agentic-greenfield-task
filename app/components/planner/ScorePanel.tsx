@@ -25,7 +25,7 @@ export function ScorePanel({ profile }: { profile: ProfileApi }) {
     <div className="pk-card">
       <p className="pk-label">Бали НМТ</p>
 
-      <p className="pk-label" style={{ marginTop: "var(--pk-space-4)", opacity: 0.8 }}>
+      <p className="pk-label" style={{ marginTop: "var(--pk-space-4)" }}>
         Четвертий предмет
       </p>
       <div

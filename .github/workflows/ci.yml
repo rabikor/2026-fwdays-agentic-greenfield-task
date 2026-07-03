@@ -1,21 +1,22 @@
-# CI — the loop nobody can skip. Copy to .github/workflows/ci.yml.
-# Mirrors the local gates deterministically: if it isn't green here, it isn't
-# done, regardless of what any agent or human claims.
+# CI — the loop nobody can skip. Mirrors local gates deterministically.
 name: ci
 
 on:
   push:
-    branches: [main, master]
+    branches: [main, master, submission]
   pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   verify:
     runs-on: ubuntu-latest
-    env:
-      # Provide test-database and auth secrets via repository secrets.
-      DATABASE_URL: ${{ secrets.TEST_DATABASE_URL }}
-      BETTER_AUTH_SECRET: ${{ secrets.BETTER_AUTH_SECRET }}
-      BETTER_AUTH_URL: http://localhost:3000
     steps:
       - uses: actions/checkout@v4
         with:
@@ -51,14 +52,21 @@ jobs:
         run: npm run test:coverage
       - name: Coverage ratchet
         run: node scripts/check-coverage-ratchet.mjs
+      - name: Eval ratchet
+        run: node scripts/check-eval-ratchet.mjs
       - name: DB integration tests
         run: npm run test:integration
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
       - name: E2E tests
         run: npm run test:e2e
+        env:
+          CI: true
 
-      # --- production build ---
+      # --- production build + a11y ---
+      - name: Accessibility (axe)
+        run: node scripts/run-with-server.mjs node scripts/check-a11y.mjs
+
       - name: Build
         run: npm run build
 
@@ -70,6 +78,8 @@ jobs:
           name: qa-evidence
           path: |
             docs/qa/traceability-report.md
+            docs/qa/trajectory-report.md
+            docs/qa/automated-verification-latest.md
             trace/trace.json
             coverage/coverage-summary.json
             playwright-report/

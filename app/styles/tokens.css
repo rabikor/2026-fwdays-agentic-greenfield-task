@@ -14,8 +14,8 @@
   --pk-ink:      #1d2733;   /* document body text */
   --pk-slate-600:#3c4a5a;   /* primary body text */
   --pk-slate-500:#4a5765;   /* body alt. */
-  --pk-slate-400:#7a8696;   /* secondary text, captions */
-  --pk-slate-300:#9aa6b4;   /* placeholders, small labels */
+  --pk-slate-400:#586574;   /* secondary text, captions (WCAG AA on white) */
+  --pk-slate-300:#6b7684;   /* placeholders, small labels (WCAG AA) */
 
   /* ---------- Color: backgrounds & surfaces ---------- */
   --pk-bg-app:    #e9e6df;  /* app background */
@@ -33,7 +33,7 @@
   --pk-safe-lite:  #dcefe4;
 
   --pk-real:       #e8a33d;  /* Realistic 40–74% */
-  --pk-real-text:  #b07d1f;
+  --pk-real-text:  #7a5610;
   --pk-real-bg:    #fbedd6;
   --pk-real-lite:  #f6e7cf;
 
@@ -43,7 +43,7 @@
   --pk-dream-lite: #f6ddd7;
 
   /* ---------- Accents ---------- */
-  --pk-action:    #2f6df6;  /* primary action, active tabs, links */
+  --pk-action:    #1d54c7;  /* primary action, active tabs, links (AA on action-bg) */
   --pk-action-bg: #e4edff;
   --pk-mint:      #7fe3b0;  /* positive on dark background */
   --pk-warn-bg:   #fff5ec;  /* deadline banner */

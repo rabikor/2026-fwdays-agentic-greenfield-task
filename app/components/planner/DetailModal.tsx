@@ -107,6 +107,17 @@ export function DetailModal({
             <div style={{ font: "700 13px var(--pk-font-text)" }}>
               {categoryLabel(evaluation)}
             </div>
+            {evaluation.fits ? (
+              <p
+                style={{
+                  font: "600 12px var(--pk-font-text)",
+                  color: "var(--pk-slate-500)",
+                  marginTop: "4px",
+                }}
+              >
+                Діапазон невизначеності: {evaluation.band[0]}–{evaluation.band[1]} %
+              </p>
+            ) : null}
             <p
               style={{
                 font: "500 13px/1.55 var(--pk-font-text)",

@@ -69,7 +69,7 @@
   font-size: var(--pk-text-label);
   letter-spacing: var(--pk-ls-label);
   text-transform: uppercase;
-  color: var(--pk-slate-300);
+  color: var(--pk-slate-500);
 }
 
 /* Text color utilities */
