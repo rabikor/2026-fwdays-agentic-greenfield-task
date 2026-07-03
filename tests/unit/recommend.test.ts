@@ -87,6 +87,20 @@ describe("compareAdvice (FR-COMPARE-01)", () => {
     expect(advice).toContain("ХНУ ім. Каразіна");
     expect(advice).toContain("пріоритет");
   });
+  it("ignores ineligible programs when recommending", () => {
+    // kma-f fits Англійська (~73 %). vnu-j accepts only Англ/Нім, so with Хімія it
+    // is ineligible — but its computed chance (98 %) would outrank kma-f if fit
+    // were ignored. The advice must still recommend the eligible kma-f.
+    const eligible = scoredOf("kma-f");
+    const strongButIneligible: ScoredProgram = {
+      program: getProgram("vnu-j")!,
+      evaluation: evaluate(getProgram("vnu-j")!, SCORES, NONE, "Хімія"),
+    };
+    expect(strongButIneligible.evaluation.fits).toBe(false);
+    const advice = compareAdvice([eligible, strongButIneligible]);
+    expect(advice).toContain("НаУКМА");
+    expect(advice).not.toContain("Лесі Українки");
+  });
 });
 
 // @trace FR-FILTER-01, FR-FILTER-02, FR-DETAIL-01, FR-SCORE-03, FR-COMPARE-01

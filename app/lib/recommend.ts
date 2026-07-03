@@ -148,10 +148,19 @@ export function adviceFor(program: Program, evaluation: Evaluation): string {
  */
 export function compareAdvice(scored: ScoredProgram[]): string {
   if (scored.length < 2) return "";
-  const sorted = [...scored].sort(
-    (a, b) => b.evaluation.chance - a.evaluation.chance,
-  );
+  // Only eligible programs get a chance recommendation — a program that doesn't
+  // accept the chosen elective shows "—", so it must not be ranked by its
+  // (irrelevant) computed chance.
+  const fitting = [...scored].filter((s) => s.evaluation.fits);
+  if (fitting.length === 0)
+    return "Жодна з обраних програм не приймає твій четвертий предмет — зміни його зліва, щоб порівняти шанси.";
+  const sorted = fitting.sort((a, b) => b.evaluation.chance - a.evaluation.chance);
   const best = sorted[0];
+  if (sorted.length === 1)
+    return (
+      `${best.program.uni} (${best.program.spec}) — єдина з обраних приймає твій ` +
+      `четвертий предмет: шанс ${best.evaluation.chance} %. Постав її пріоритетом 1.`
+    );
   const runnerUp = sorted[1];
   const gap = best.evaluation.chance - runnerUp.evaluation.chance;
   const contrast =
