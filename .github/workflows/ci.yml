@@ -18,6 +18,9 @@ jobs:
       BETTER_AUTH_URL: http://localhost:3000
     steps:
       - uses: actions/checkout@v4
+        with:
+          # check-trajectory greps full git history for Slice: trailers.
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
