@@ -6,6 +6,7 @@
 @import "./styles/base.css";
 @import "./styles/components.css";
 @import "./styles/shell.css";
+@import "./styles/planner.css";
 
 /* Bind the self-hosted next/font families (set on <html> in layout.tsx)
    to the design system's typography tokens. Keeps every .pk-* class and
