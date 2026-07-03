@@ -143,10 +143,13 @@ one-commit-per-slice history) — those are graded by the trajectory-eval workfl
 Scope: ${slices.length} archived slice(s).
 Result: ${failures.length === 0 ? "PASS" : `FAIL (${failures.length} failure${failures.length === 1 ? "" : "s"})`}${warnings.length ? `, ${warnings.length} warning(s)` : ""}
 
-| Slice | Review evidence | Trailer commits | design+tasks | lib domains touched |
+| Slice | Review evidence | Trailer | design+tasks | lib domains touched |
 |---|---|---|---|---|
 ${rows
-  .map((r) => `| ${r.slice} | ${r.reviewEvidence === "clean" ? "clean" : `**${r.reviewEvidence}**`} | ${r.trailerCommits || "**0**"} | ${ok(r.processComplete)} | ${r.libDomains.join(", ") || "-"} |`)
+  .map((r) => {
+    const trailer = r.trailerCommits > 0 ? "yes" : "**no**";
+    return `| ${r.slice} | ${r.reviewEvidence === "clean" ? "clean" : `**${r.reviewEvidence}**`} | ${trailer} | ${ok(r.processComplete)} | ${r.libDomains.join(", ") || "-"} |`;
+  })
   .join("\n")}
 
 ## Cross-slice module overlap

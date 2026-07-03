@@ -8,18 +8,18 @@ one-commit-per-slice history) — those are graded by the trajectory-eval workfl
 Scope: 10 archived slice(s).
 Result: PASS
 
-| Slice | Review evidence | Trailer commits | design+tasks | lib domains touched |
+| Slice | Review evidence | Trailer | design+tasks | lib domains touched |
 |---|---|---|---|---|
-| 2026-07-03-add-app-shell | clean | 1 | yes | - |
-| 2026-07-03-add-comparison | clean | 2 | yes | - |
-| 2026-07-03-add-filtering | clean | 1 | yes | - |
-| 2026-07-03-add-program-data | clean | 1 | yes | - |
-| 2026-07-03-add-program-detail | clean | 2 | yes | - |
-| 2026-07-03-add-recommendations | clean | 2 | yes | - |
-| 2026-07-03-add-score-input | clean | 1 | yes | - |
-| 2026-07-03-add-scoring-engine | clean | 1 | yes | - |
-| 2026-07-03-add-shortlist | clean | 2 | yes | - |
-| 2026-07-03-add-state-persistence | clean | 1 | yes | - |
+| 2026-07-03-add-app-shell | clean | yes | yes | - |
+| 2026-07-03-add-comparison | clean | yes | yes | - |
+| 2026-07-03-add-filtering | clean | yes | yes | - |
+| 2026-07-03-add-program-data | clean | yes | yes | - |
+| 2026-07-03-add-program-detail | clean | yes | yes | - |
+| 2026-07-03-add-recommendations | clean | yes | yes | - |
+| 2026-07-03-add-score-input | clean | yes | yes | - |
+| 2026-07-03-add-scoring-engine | clean | yes | yes | - |
+| 2026-07-03-add-shortlist | clean | yes | yes | - |
+| 2026-07-03-add-state-persistence | clean | yes | yes | - |
 
 ## Cross-slice module overlap
 
