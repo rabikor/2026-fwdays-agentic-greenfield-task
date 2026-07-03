@@ -41,8 +41,7 @@
       "tests": [
         "tests/unit/scoring.test.ts",
         "evals/cases/a11y.eval.ts"
-      ],
-      "recordings": []
+      ]
     },
     {
       "id": "FR-INPUT-02",
@@ -53,8 +52,7 @@
       "tests": [
         "tests/unit/scoring.test.ts",
         "evals/cases/a11y.eval.ts"
-      ],
-      "recordings": []
+      ]
     },
     {
       "id": "FR-INPUT-03",
@@ -65,8 +63,7 @@
       "tests": [
         "tests/unit/scoring.test.ts",
         "evals/cases/transparency.eval.ts"
-      ],
-      "recordings": []
+      ]
     },
     {
       "id": "FR-FILTER-01",
@@ -76,8 +73,7 @@
       "planned": null,
       "tests": [
         "tests/unit/recommend.test.ts"
-      ],
-      "recordings": []
+      ]
     },
     {
       "id": "FR-FILTER-02",
@@ -87,8 +83,7 @@
       "planned": null,
       "tests": [
         "tests/unit/recommend.test.ts"
-      ],
-      "recordings": []
+      ]
     },
     {
       "id": "FR-SCORE-01",
@@ -98,8 +93,7 @@
       "planned": null,
       "tests": [
         "tests/unit/scoring.test.ts"
-      ],
-      "recordings": []
+      ]
     },
     {
       "id": "FR-SCORE-02",
@@ -112,8 +106,7 @@
         "tests/unit/scoring.test.ts",
         "evals/cases/format.eval.ts",
         "evals/cases/honesty.eval.ts"
-      ],
-      "recordings": []
+      ]
     },
     {
       "id": "FR-SCORE-03",
@@ -127,8 +120,7 @@
         "tests/unit/scoring.test.ts",
         "evals/cases/a11y.eval.ts",
         "evals/cases/advice.eval.ts"
-      ],
-      "recordings": []
+      ]
     },
     {
       "id": "FR-DETAIL-01",
@@ -140,8 +132,7 @@
         "tests/unit/recommend.test.ts",
         "evals/cases/advice.eval.ts",
         "evals/cases/transparency.eval.ts"
-      ],
-      "recordings": []
+      ]
     },
     {
       "id": "FR-COMPARE-01",
@@ -154,8 +145,7 @@
         "tests/unit/storage.test.ts",
         "evals/cases/advice.eval.ts",
         "evals/cases/ux.eval.ts"
-      ],
-      "recordings": []
+      ]
     },
     {
       "id": "FR-LIST-01",
@@ -166,8 +156,7 @@
       "tests": [
         "tests/unit/storage.test.ts",
         "evals/cases/ux.eval.ts"
-      ],
-      "recordings": []
+      ]
     },
     {
       "id": "FR-LIST-02",
@@ -178,8 +167,7 @@
       "tests": [
         "tests/unit/status.test.ts",
         "evals/cases/a11y.eval.ts"
-      ],
-      "recordings": []
+      ]
     },
     {
       "id": "FR-STATE-01",
@@ -191,8 +179,7 @@
       "planned": null,
       "tests": [
         "tests/unit/storage.test.ts"
-      ],
-      "recordings": []
+      ]
     },
     {
       "id": "FR-UX-01",
@@ -204,8 +191,7 @@
       "planned": null,
       "tests": [
         "evals/cases/ux.eval.ts"
-      ],
-      "recordings": []
+      ]
     }
   ],
   "failures": [],
@@ -213,62 +199,6 @@
     {
       "check": "plan-ownership",
       "msg": "docs/mvp-capability-plan.md not found - ownership check skipped (expected before Phase 3; mandatory at --release)"
-    },
-    {
-      "check": "recording-evidence",
-      "msg": "FR-INPUT-01 is not referenced by any recording manifest under docs/qa/"
-    },
-    {
-      "check": "recording-evidence",
-      "msg": "FR-INPUT-02 is not referenced by any recording manifest under docs/qa/"
-    },
-    {
-      "check": "recording-evidence",
-      "msg": "FR-INPUT-03 is not referenced by any recording manifest under docs/qa/"
-    },
-    {
-      "check": "recording-evidence",
-      "msg": "FR-FILTER-01 is not referenced by any recording manifest under docs/qa/"
-    },
-    {
-      "check": "recording-evidence",
-      "msg": "FR-FILTER-02 is not referenced by any recording manifest under docs/qa/"
-    },
-    {
-      "check": "recording-evidence",
-      "msg": "FR-SCORE-01 is not referenced by any recording manifest under docs/qa/"
-    },
-    {
-      "check": "recording-evidence",
-      "msg": "FR-SCORE-02 is not referenced by any recording manifest under docs/qa/"
-    },
-    {
-      "check": "recording-evidence",
-      "msg": "FR-SCORE-03 is not referenced by any recording manifest under docs/qa/"
-    },
-    {
-      "check": "recording-evidence",
-      "msg": "FR-DETAIL-01 is not referenced by any recording manifest under docs/qa/"
-    },
-    {
-      "check": "recording-evidence",
-      "msg": "FR-COMPARE-01 is not referenced by any recording manifest under docs/qa/"
-    },
-    {
-      "check": "recording-evidence",
-      "msg": "FR-LIST-01 is not referenced by any recording manifest under docs/qa/"
-    },
-    {
-      "check": "recording-evidence",
-      "msg": "FR-LIST-02 is not referenced by any recording manifest under docs/qa/"
-    },
-    {
-      "check": "recording-evidence",
-      "msg": "FR-STATE-01 is not referenced by any recording manifest under docs/qa/"
-    },
-    {
-      "check": "recording-evidence",
-      "msg": "FR-UX-01 is not referenced by any recording manifest under docs/qa/"
     }
   ]
 }

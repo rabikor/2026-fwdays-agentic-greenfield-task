@@ -11,7 +11,7 @@ Result: PASS, 20 warning(s)
 | Slice | Review evidence | Trailer commits | design+tasks | lib domains touched |
 |---|---|---|---|---|
 | 2026-07-03-add-app-shell | **missing** | **0** | yes | - |
-| 2026-07-03-add-comparison | **missing** | 1 | **no** | - |
+| 2026-07-03-add-comparison | **missing** | 2 | **no** | - |
 | 2026-07-03-add-filtering | **missing** | 1 | **no** | - |
 | 2026-07-03-add-program-data | **missing** | 1 | **no** | - |
 | 2026-07-03-add-program-detail | **missing** | 1 | **no** | - |

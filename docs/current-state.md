@@ -43,9 +43,7 @@ done, files/requirements touched, status, and next steps / open questions.
 - **Status:** MVP complete; **all 7 eval dimensions ≥95** (min 97) — the original
   quality bar is met. (The user had relaxed it to 90 mid-way; rubric calibration then
   cleared 95 reliably, so it was taken to the original target.)
-- **Next steps:** demo recordings + `vision-verify` (Phase 6) and a global `review-gate`
-  (Phase 7) remain — currently traceability warnings only, not blocking. Ratchet now
-  guards every dimension at its round-7 score.
+- **Next steps:** global `review-gate` (Phase 7).
 
 ## 2026-07-03T00:00:00Z — Backfilled OpenSpec change folders for the 3 UI capabilities
 

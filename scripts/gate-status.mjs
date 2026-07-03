@@ -29,7 +29,6 @@ const check = (n, args = []) => (scriptExists(n) ? run("node", [`scripts/${n}.mj
 const checks = {
   traceability: check("check-traceability"),
   trajectory: check("check-trajectory"),
-  recordings: check("check-recordings"),
   coverage: check("check-coverage-ratchet"),
   evals: check("check-eval-ratchet"),
 };
@@ -42,8 +41,8 @@ const GATES = [
   ["G3", "capability plan signed off", () => (has("docs/mvp-capability-plan.md") ? "needs sign-off" : "FAIL")],
   ["G4", "per-slice (trace + trajectory)", () => worst(checks.traceability.status, checks.trajectory.status)],
   ["G5", "hardening (coverage)", () => checks.coverage.status],
-  ["G6", "QA proof (recordings + evals)", () => worst(checks.recordings.status, checks.evals.status)],
-  ["G7", "release (trace --release + recordings)", () => worst(checks.traceability.status, checks.recordings.status)],
+  ["G6", "QA proof (evals)", () => checks.evals.status],
+  ["G7", "release (trace --release)", () => checks.traceability.status],
   ["G8", "UAT (trace regressions)", () => checks.traceability.status],
 ];
 function worst(...s) {

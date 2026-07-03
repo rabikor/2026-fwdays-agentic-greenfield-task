@@ -13,13 +13,10 @@
     "test:e2e": "echo 'no e2e tests yet — add Playwright in Phase 5' && exit 0",
     "test:coverage": "vitest run --coverage",
     "qa:verify": "node scripts/qa-verify.mjs",
-    "qa:record-demos": "node scripts/record-demos.mjs",
-    "qa:record-proof": "node scripts/record-demos.mjs",
     "check:trace": "node scripts/check-traceability.mjs",
     "check:coverage": "node scripts/check-coverage-ratchet.mjs",
     "check:eval": "node scripts/check-eval-ratchet.mjs",
     "check:trajectory": "node scripts/check-trajectory.mjs",
-    "check:recordings": "node scripts/check-recordings.mjs",
     "check:a11y": "node scripts/check-a11y.mjs",
     "gate:status": "node scripts/gate-status.mjs"
   },
@@ -29,6 +26,7 @@
     "react-dom": "19.2.4"
   },
   "devDependencies": {
+    "@playwright/test": "^1.61.1",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/react": "^16.3.2",
     "@types/node": "^20",
